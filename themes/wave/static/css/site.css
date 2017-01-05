@@ -1,0 +1,236 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after {
+  content: '';
+  content: none; }
+
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+a {
+  text-decoration: none; }
+
+.inner {
+  max-width: 900px;
+  margin-left: 5%;
+  margin-right: 5%; }
+
+html {
+  font-size: 18px;
+  font-family: robotoregular;
+  line-height: 1.5rem;
+  color: #484848; }
+
+h1 {
+  font-family: firasansbold;
+  font-size: 48px; }
+
+h2 {
+  font-family: firasanssemibold;
+  font-size: 36px; }
+
+h3 {
+  font-family: firasansmedium;
+  font-size: 24px; }
+
+h4 {
+  font-family: robotoregular; }
+
+h5 {
+  font-family: robotoregular; }
+
+h6 {
+  font-family: robotoregular;
+  font-size: .75rem; }
+
+p {
+  font-family: robotoregular;
+  font-size: 1rem;
+  line-height: 1.5rem; }
+
+a {
+  border-bottom: 3px solid #01FFC7;
+  color: inherit;
+  transition: background 0.1s cubic-bezier(0.33, 0.66, 0.66, 1); }
+  a:hover {
+    background: #01FFC7; }
+
+@font-face {
+  font-family: 'firamonobold';
+  src: url("../fonts/FiraMono-Bold.otf");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'firamonoregular';
+  src: url("../fonts/FiraMono-Regular.otf");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'firasansbold';
+  src: url("../fonts/FiraSans-Bold.eot");
+  src: url("../fonts/FiraSans-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/FiraSans-Bold.woff") format("woff"), url("../fonts/FiraSans-Bold.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'firasanssemibold';
+  src: url("../fonts/FiraSans-SemiBold.eot");
+  src: url("../fonts/FiraSans-SemiBold.eot?#iefix") format("embedded-opentype"), url("../fonts/FiraSans-SemiBold.woff") format("woff"), url("../fonts/FiraSans-SemiBold.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'firasansmedium';
+  src: url("../fonts/FiraSans-Medium.eot");
+  src: url("../fonts/FiraSans-Medium.eot?#iefix") format("embedded-opentype"), url("../fonts/FiraSans-Medium.woff") format("woff"), url("../fonts/FiraSans-Medium.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'robotoregular';
+  src: url("../fonts/Roboto-Regular-webfont.eot");
+  src: url("../fonts/Roboto-Regular-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/Roboto-Regular-webfont.woff") format("woff"), url("../fonts/Roboto-Regular-webfont.ttf") format("truetype"), url("../fonts/Roboto-Regular-webfont.svg#robotoregular") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'robotobold';
+  src: url("../fonts/Roboto-Bold-webfont.eot");
+  src: url("../fonts/Roboto-Bold-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/Roboto-Bold-webfont.woff") format("woff"), url("../fonts/Roboto-Bold-webfont.ttf") format("truetype"), url("../fonts/Roboto-Bold-webfont.svg#robotobold") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'robotoitalic';
+  src: url("../fonts/Roboto-Italic-webfont.eot");
+  src: url("../fonts/Roboto-Italic-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/Roboto-Italic-webfont.woff") format("woff"), url("../fonts/Roboto-Italic-webfont.ttf") format("truetype"), url("../fonts/Roboto-Italic-webfont.svg#robotoitalic") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+.push-right {
+  margin-left: auto !important; }
+
+header {
+  margin: 50px auto;
+  width: 90%;
+  height: 73px;
+  display: flex; }
+  header #logo {
+    background: url("../img/logo.svg") no-repeat;
+    width: 73px;
+    height: 64px; }
+    header #logo a {
+      display: block;
+      width: 100%;
+      height: 100%;
+      border: 0px; }
+      header #logo a:hover {
+        background: url("../img/logo.svg") no-repeat; }
+  header .header_link {
+    align-self: flex-end;
+    margin-left: 50px;
+    border-bottom: 0px; }
+
+.highlight {
+  margin: 15px 0px;
+  padding: 1rem 0px;
+  overflow: auto;
+  font-family: firamonoregular; }
+
+.post .full-img {
+  display: block;
+  width: 100%; }
+
+#blurb h1 {
+  font-family: firamonobold;
+  line-height: 5rem;
+  font-size: 3.5rem;
+  margin-top: 150px; }
+
+.post .date {
+  color: #9B9B9B;
+  font-size: 14px;
+  font-family: firasansbold; }
+
+.post ul, .post ol {
+  line-height: 1.5rem;
+  margin-left: 1.5rem; }
+
+.post ol {
+  list-style: decimal; }
+
+.post ul {
+  list-style: disc; }
+
+.post-list h2 a {
+  line-height: 50px; }
+
+.readmore {
+  font-size: 16px;
+  font-family: firasansmedium; }
+
+.portfolio .portfolio_item {
+  border: solid 1px orange; }
+
+.post .date {
+  margin-top: 14px;
+  margin-bottom: 30px; }
+
+.post h2 {
+  margin-top: 2rem; }
+
+.post h3 {
+  margin-top: 1rem; }
+
+.post p {
+  margin-bottom: .75rem; }
+
+.post ul, .post ol {
+  margin-bottom: .75rem; }
+  .post ul li, .post ol li {
+    margin-top: 1rem; }
+
+.post-list .post {
+  margin-bottom: 60px; }
+
+.portfolio {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; }
+  .portfolio .portfolio_item {
+    width: 270px;
+    height: 200px;
+    margin-top: 40px; }
+
+footer {
+  margin-top: 100px; }

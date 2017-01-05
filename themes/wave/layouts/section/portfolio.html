@@ -1,0 +1,17 @@
+{{ partial "header.html" . }}
+<section class="inner">
+  <h1>Portfolio</h1>
+
+    <section class="portfolio">
+      {{- range .Data.Pages }}
+      <section class="portfolio_item" style="background:url(/img/{{ .Params.assets }}/thumb.png)">
+
+
+        <a href="{{ .Permalink }}">{{ .Title }}</a>
+      </section>
+      {{- end }}
+    </section>
+
+</section>
+
+  {{ partial "footer.html" . }}

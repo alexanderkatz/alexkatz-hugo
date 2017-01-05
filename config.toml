@@ -1,0 +1,11 @@
+theme = "wave"
+# baseurl = "alexkatz.me"
+baseurl = "https://alexanderkatz.github.io/"
+languageCode = "en-us"
+title = "Alex Katz"
+MetaDataFormat = "toml"
+
+canonifyURLs = true
+contentDir = "content"
+layoutDir = "layouts"
+publishDir = "public"

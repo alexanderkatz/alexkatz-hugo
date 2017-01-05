@@ -1,0 +1,10 @@
+.portfolio{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  .portfolio_item{
+      width: 270px;
+      height: 200px;
+      margin-top: 40px;
+  }
+}
