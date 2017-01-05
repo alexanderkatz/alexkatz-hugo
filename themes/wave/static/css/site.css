@@ -40,8 +40,8 @@ a {
 
 .inner {
   max-width: 900px;
-  margin-left: 5%;
-  margin-right: 5%; }
+  width: 84%;
+  margin-left: 7%; }
 
 html {
   font-size: 18px;
@@ -141,8 +141,8 @@ a {
   margin-left: auto !important; }
 
 header {
-  margin: 50px auto;
-  width: 90%;
+  margin: 50px 0px 50px 7%;
+  width: 84%;
   height: 73px;
   display: flex; }
   header #logo {
