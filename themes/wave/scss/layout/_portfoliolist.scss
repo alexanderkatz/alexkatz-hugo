@@ -20,7 +20,7 @@
 }
 
 @media screen
-and (min-device-width: 500px)
+and (min-width: 500px)
 and (-webkit-min-device-pixel-ratio: 1)  {
   .portfolio{
       column-count: 2;
@@ -28,7 +28,7 @@ and (-webkit-min-device-pixel-ratio: 1)  {
   }
 }
 @media screen
-and (min-device-width: 750px)
+and (min-width: 750px)
 and (-webkit-min-device-pixel-ratio: 1)  {
   .portfolio{
       column-count: 4;
