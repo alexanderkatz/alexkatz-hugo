@@ -225,27 +225,16 @@ header {
 
 .portfolio {
   margin-top: 2rem;
-  column-count: 1;
-  -webkit-column-count: 1;
+  column-width: 250px;
   column-gap: 0;
   -webkit-column-gap: 0; }
   .portfolio .portfolio_item {
     break-inside: avoid;
     -webkit-column-break-inside: avoid; }
   .portfolio .std {
-    height: 200px; }
+    height: 250px; }
   .portfolio .poster {
-    height: 300px; }
-
-@media screen and (min-width: 500px) and (-webkit-min-device-pixel-ratio: 1) {
-  .portfolio {
-    column-count: 2;
-    -webkit-column-count: 2; } }
-
-@media screen and (min-width: 750px) and (-webkit-min-device-pixel-ratio: 1) {
-  .portfolio {
-    column-count: 4;
-    -webkit-column-count: 4; } }
+    height: 386px; }
 
 footer {
   margin-top: 100px; }

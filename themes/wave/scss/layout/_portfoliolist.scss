@@ -1,8 +1,7 @@
 
 .portfolio{
   margin-top: 2rem;
-  column-count: 1;
-  -webkit-column-count: 1;
+  column-width: 250px;
   column-gap: 0;
   -webkit-column-gap: 0;
   .portfolio_item{
@@ -11,27 +10,31 @@
   }
   // Standard portfolio item height, specify in front-matter
   .std{
-    height: 200px;
+    height: 250px;
   }
   // Poster portfolio item height, specify in front-matter
   .poster{
-    height: 300px;
+    height: 386px;
   }
 }
 
-@media screen
-and (min-width: 500px)
-and (-webkit-min-device-pixel-ratio: 1)  {
-  .portfolio{
-      column-count: 2;
-      -webkit-column-count: 2;
-  }
-}
-@media screen
-and (min-width: 750px)
-and (-webkit-min-device-pixel-ratio: 1)  {
-  .portfolio{
-      column-count: 4;
-      -webkit-column-count: 4;
-  }
-}
+// @media screen
+// and (min-width: 500px)
+// and (-webkit-min-device-pixel-ratio: 1)  {
+//   .portfolio{
+//     column-width: 100px;
+//
+//       column-count: 2;
+//       -webkit-column-count: 2;
+//   }
+// }
+// @media screen
+// and (min-width: 750px)
+// and (-webkit-min-device-pixel-ratio: 1)  {
+//   .portfolio{
+//     column-width: 100px;
+//
+//       column-count: 4;
+//       -webkit-column-count: 4;
+//   }
+// }
