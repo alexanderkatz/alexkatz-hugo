@@ -210,6 +210,9 @@ header {
   margin: auto;
   max-width: 750px; }
 
+.page-title {
+  margin-bottom: 2rem; }
+
 .post {
   max-width: 750px;
   width: 100%; }
@@ -260,3 +263,17 @@ footer {
 
 img.full {
   height: calc(100vh - 50px); }
+
+.videoWrapper {
+  position: relative;
+  padding-bottom: 56.25%;
+  /* 16:9 */
+  padding-top: 25px;
+  height: 0; }
+
+.videoWrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; }
