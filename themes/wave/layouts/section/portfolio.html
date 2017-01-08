@@ -1,15 +1,11 @@
 {{ partial "header.html" . }}
-<section class="inner">
-  <h1>Portfolio</h1>
-
-    <section class="portfolio">
+  <!-- <h1>Portfolio</h1> -->
+    <section class="portfolio padding">
       {{- range .Data.Pages }}
       <section class="portfolio_item {{ .Params.size }}" style="background:url(/img/{{ .Params.assets }}/thumb.png) center no-repeat">
-        <a href="{{ .Permalink }}">{{ .Title }}</a>
+          <a href="{{ .Permalink }}">{{ .Title }}</a>
       </section>
       {{- end }}
     </section>
-
-</section>
 
   {{ partial "footer.html" . }}

@@ -5,4 +5,4 @@ assets = "listen-and-tell"
 size = "poster"
 +++
 
-<img src="/img/listen-and-tell/listen-and-tell.png"/>
+<img class="full" src="/img/listen-and-tell/listen-and-tell.png"/>

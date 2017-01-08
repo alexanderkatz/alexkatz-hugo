@@ -38,11 +38,6 @@ table {
 a {
   text-decoration: none; }
 
-.inner {
-  margin-left: 7%;
-  margin-right: 7%;
-  max-width: 1200px; }
-
 html {
   font-size: 18px;
   font-family: robotoregular;
@@ -200,8 +195,20 @@ header {
   font-family: firasansmedium; }
 
 .portfolio .portfolio_item {
-  background-size: cover !important;
-  border: solid 1px gray; }
+  background-size: cover !important; }
+  .portfolio .portfolio_item a {
+    border: 0px;
+    color: rgba(212, 212, 212, 0); }
+    .portfolio .portfolio_item a:hover {
+      background: rgba(212, 212, 212, 0); }
+
+/* Base Layout For Site */
+.padding {
+  padding: 0px 20px; }
+
+.center-block {
+  margin: auto;
+  max-width: 750px; }
 
 .post {
   max-width: 750px;
@@ -220,17 +227,29 @@ header {
     .post ul li, .post ol li {
       margin-top: 1rem; }
 
-.post-list .post {
-  margin-bottom: 120px; }
+.post-list {
+  margin: auto; }
+  .post-list .post {
+    margin-bottom: 120px; }
 
 .portfolio {
-  margin-top: 2rem;
+  max-width: 1260px;
+  margin: 2rem auto;
   column-width: 250px;
-  column-gap: 0;
-  -webkit-column-gap: 0; }
+  column-gap: 20px;
+  -webkit-column-gap: 20px; }
   .portfolio .portfolio_item {
+    margin-top: 20px;
     break-inside: avoid;
-    -webkit-column-break-inside: avoid; }
+    -webkit-column-break-inside: avoid;
+    position: relative; }
+    .portfolio .portfolio_item a {
+      display: block;
+      width: 100%;
+      height: 100%;
+      line-height: 45px;
+      position: absolute;
+      bottom: 0px; }
   .portfolio .std {
     height: 250px; }
   .portfolio .poster {
@@ -238,3 +257,6 @@ header {
 
 footer {
   margin-top: 100px; }
+
+img.full {
+  height: calc(100vh - 50px); }
