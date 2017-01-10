@@ -1,3 +1,4 @@
 img.full{
-  height: calc(100vh - 50px);
+  max-height: calc(100vh - 50px);
+  max-width: 100%;
 }

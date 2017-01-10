@@ -69,7 +69,8 @@ h6 {
 p {
   font-family: robotoregular;
   font-size: 1rem;
-  line-height: 1.5rem; }
+  line-height: 1.5rem;
+  margin-bottom: .75rem; }
 
 a {
   border-bottom: 3px solid #01FFC7;
@@ -223,8 +224,6 @@ header {
     margin-top: 2rem; }
   .post h3 {
     margin-top: 1rem; }
-  .post p {
-    margin-bottom: .75rem; }
   .post ul, .post ol {
     margin-bottom: .75rem; }
     .post ul li, .post ol li {
@@ -262,14 +261,16 @@ footer {
   margin-top: 100px; }
 
 img.full {
-  height: calc(100vh - 50px); }
+  max-height: calc(100vh - 50px);
+  max-width: 100%; }
 
 .videoWrapper {
   position: relative;
   padding-bottom: 56.25%;
   /* 16:9 */
   padding-top: 25px;
-  height: 0; }
+  height: 0;
+  margin-bottom: 50px; }
 
 .videoWrapper iframe {
   position: absolute;

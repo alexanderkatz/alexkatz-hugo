@@ -5,3 +5,8 @@ assets = "personal-brand"
 size = "std"
 
 +++
+
+<img class="full" src="/img/personal-brand/logostudy2.png"/>
+<img class="full" src="/img/personal-brand/logostudy1.png"/>
+<img class="full" src="/img/personal-brand/logostudy3.png"/>
+<img class="full" src="/img/personal-brand/logostudy4.png"/>
