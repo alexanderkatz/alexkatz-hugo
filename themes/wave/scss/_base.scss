@@ -3,12 +3,20 @@ $electric: #01FFC7;
 $lightelectric: rgba(2, 255, 198, .5);
 $text: #484848;
 
-// html,body{  height: 100%;}
 html {
+  height: 100%;
   font-size: 18px;
   font-family: robotoregular;
   line-height: 1.5rem;
   color:#484848;
+}
+body{
+  height: 100%;
+}
+#wrapper{
+  min-height: 100%;
+  position:relative;
+  overflow: hidden;
 }
 
 h1 {

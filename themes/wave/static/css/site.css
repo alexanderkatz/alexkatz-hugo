@@ -39,10 +39,19 @@ a {
   text-decoration: none; }
 
 html {
+  height: 100%;
   font-size: 18px;
   font-family: robotoregular;
   line-height: 1.5rem;
   color: #484848; }
+
+body {
+  height: 100%; }
+
+#wrapper {
+  min-height: 100%;
+  position: relative;
+  overflow: hidden; }
 
 h1 {
   font-family: firasansbold;
@@ -137,7 +146,7 @@ a {
   margin-left: auto !important; }
 
 header {
-  margin: 50px 0px 50px 7%;
+  padding: 50px 0px 50px 7%;
   width: 84%;
   height: 73px;
   display: flex; }
@@ -203,9 +212,14 @@ header {
     .portfolio .portfolio_item a:hover {
       background: rgba(212, 212, 212, 0); }
 
+footer nav {
+  border-top: solid #D8D8D8 1px; }
+  footer nav div {
+    text-align: center; }
+
 /* Base Layout For Site */
 .padding {
-  padding: 0px 20px; }
+  padding-bottom: 150px; }
 
 .center-block {
   margin: auto;
@@ -258,7 +272,22 @@ header {
     height: 386px; }
 
 footer {
-  margin-top: 100px; }
+  width: 100%;
+  height: 108px;
+  position: absolute;
+  bottom: 0px; }
+  footer nav {
+    width: 90%;
+    max-width: 750px;
+    height: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: center; }
+    footer nav div {
+      width: 33%;
+      max-width: 180px;
+      align-self: center;
+      text-align: center; }
 
 img.full {
   max-height: calc(100vh - 50px);

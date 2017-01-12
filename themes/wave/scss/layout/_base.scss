@@ -1,7 +1,8 @@
 /* Base Layout For Site */
 
+// Class ensures footer has enough space, place on content
 .padding{
-  padding: 0px 20px;
+  padding-bottom: 150px;
 }
 .center-block{
   margin: auto;
