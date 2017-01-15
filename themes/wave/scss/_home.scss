@@ -1,8 +1,19 @@
+  .home{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top:0px;
+    background: url('../img/homebackground.jpg') center bottom;
+    background-size: cover;
+    display: flex;
+  }
+
 #blurb{
+  align-self: center;
+  padding-left: 7%;
   h1{
     font-family: firamonobold;
     line-height: 5rem;
     font-size: 3.5rem;
-    margin-top: 150px;
   }
 }

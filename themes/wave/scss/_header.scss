@@ -3,6 +3,8 @@ header {
     width: 84%;
     height: 73px;
     display: flex;
+    // Header Should Never Be Hidden
+    *{z-index: 9999;}
     #logo {
         background: url('../img/logo.svg') no-repeat;
         width: 73px;
