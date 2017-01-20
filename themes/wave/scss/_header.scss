@@ -23,8 +23,10 @@ header {
         align-self: flex-end;
         margin-left: 50px;
         border-bottom: 0px;
+        transition: background 0.1s cubic-bezier(.33,.66,.66,1);
     }
 
     .header_link:hover {
+        background: $electric;
     }
 }
