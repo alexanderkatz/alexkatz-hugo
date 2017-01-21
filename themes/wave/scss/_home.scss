@@ -1,19 +1,21 @@
-  .home{
+.home {
     width: 100%;
     height: 100%;
     position: fixed;
-    top:0px;
+    top: 0;
     background: url('../img/homebackground.png') 65% bottom;
     background-size: cover;
     display: flex;
-  }
+}
 
-#blurb{
-  align-self: center;
-  padding-left: 7%;
-  h1{
-    font-family: firamonobold;
-    line-height: 5rem;
-    font-size: 3.5rem;
-  }
+#blurb {
+    // color: #44C0FF;
+    align-self: center;
+    padding-left: 7%;
+
+    h1 {
+        font-family: firamonobold;
+        line-height: 5rem;
+        font-size: 3.5rem;
+    }
 }

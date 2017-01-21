@@ -43,7 +43,8 @@ html {
   font-size: 18px;
   font-family: robotoregular;
   line-height: 1.5rem;
-  color: #484848; }
+  color: #484848;
+  background: #F4F4F4; }
 
 body {
   height: 100%; }
@@ -275,7 +276,7 @@ img.full {
   margin-left: auto !important; }
 
 header {
-  padding: 50px 0px 50px 7%;
+  padding: 50px 0 50px 7%;
   width: 84%;
   height: 73px;
   display: flex; }
@@ -289,13 +290,15 @@ header {
       display: block;
       width: 100%;
       height: 100%;
-      border: 0px; }
+      border: 0; }
       header #logo a:hover {
         background: url("../img/logo.svg") no-repeat; }
   header .header_link {
+    font-family: robotobold;
+    font-size: 20px;
     align-self: flex-end;
     margin-left: 50px;
-    border-bottom: 0px;
+    border-bottom: 0;
     transition: background 0.1s cubic-bezier(0.33, 0.66, 0.66, 1); }
   header .header_link:hover {
     background: #01FFC7; }
@@ -314,7 +317,7 @@ header {
   width: 100%;
   height: 100%;
   position: fixed;
-  top: 0px;
+  top: 0;
   background: url("../img/homebackground.png") 65% bottom;
   background-size: cover;
   display: flex; }
