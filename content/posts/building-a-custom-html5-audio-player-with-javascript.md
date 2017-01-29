@@ -70,7 +70,7 @@ If the audio is playing we pause it and change pButton’s class to play.
 
 That is all the code you need to make a play button that targets the audio element.
 
-Functions like play and pause are part of the HTMLMediaElement’s interface. If you are interested the API is here.
+Functions like play and pause are part of the HTMLMediaElement’s interface. If you are interested the API is [here](https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement).
 
 ## TRACK PROGRESS
 
@@ -108,7 +108,7 @@ Here is the HTML and CSS. You should also add the float:left property to the pla
 
 The audio player should look something like this
 
-## Image Goes Here
+<img width="400" src="/img/building-a-custom-html5-audio-player-with-javascript/audioplayer.png">
 
 The next step is to write JavaScript that will move the playhead as the track advances. This is accomplished by adding an event listener for timeupdate that triggers a function that moves the playhead the appropriate amount. In order for time update to work we will also need to get the duration of the audio file. The code is also below.
 
@@ -145,12 +145,12 @@ timeline.addEventListener("click", function (event) {
 }, false);
 
 // returns click as decimal (.77) of the total timelineWidth
-function clickPercent(e) {
-	return (e.pageX - timeline.offsetLeft) / timelineWidth;
+function clickPercent(event) {
+    return (event.clientX - getPosition(timeline)) / timelineWidth;
 }
 
-function moveplayhead(e) {
-	var newMargLeft = e.pageX - timeline.offsetLeft;
+function moveplayhead(event) {
+    var newMargLeft = event.clientX - getPosition(timeline);
 
 	if (newMargLeft = 0 amp;amp; newMargLeft = timelineWidth) {
 		playhead.style.marginLeft = newMargLeft + "px";
@@ -162,17 +162,23 @@ function moveplayhead(e) {
 		playhead.style.marginLeft = timelineWidth + "px";
 	}
 }
+
+// getPosition
+// Returns elements left position relative to top-left of viewport
+function getPosition(el) {
+    return el.getBoundingClientRect().left;
+}
 {{< /highlight >}}
 
 The code above adds an event listener to the timeline. If the timeline is clicked, this function fires which moves the playhead to the click position and updates the track’s current time.
 
-The moveplayhead function works by changing the playhead’s left margin. The left margin controls the space between the left side of the timeline and the playhead. To calculate the correct left margin value, the x-coordinate of the click event is subtracted by the timeline’s left offset.
+The moveplayhead function works by changing the playhead’s left margin. The left margin controls the space between the left side of the timeline and the playhead. To calculate the correct left margin value, the x-coordinate of the click event is subtracted by the timeline’s left offset. The left offset is calculated with `getPosition`.
 
 The conditionals are necessary if the you want to support playhead dragging. If you don’t, just set the playhead’s left margin to newMarginLeft, as any click will be inside the timeline.
 
 The codepen below puts everything together.
 
-<p data-height="330" data-theme-id="5580" data-slug-hash="Kfgix" data-default-tab="result" data-user="katzkode" data-embed-version="2" data-pen-title="HTML5 Audio Player" class="codepen">See the Pen <a href="http://codepen.io/katzkode/pen/Kfgix/">HTML5 Audio Player</a> by Alex Katz (<a href="http://codepen.io/katzkode">@katzkode</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+<p data-height="300" data-theme-id="5580" data-slug-hash="Kfgix" data-default-tab="result" data-user="katzkode" data-embed-version="2" data-pen-title="HTML5 Audio Player" class="codepen">See the Pen <a href="http://codepen.io/katzkode/pen/Kfgix/">HTML5 Audio Player</a> by Alex Katz (<a href="http://codepen.io/katzkode">@katzkode</a>) on <a href="http://codepen.io">CodePen</a>.</p>
 <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
 
 If you are interested in using multiple audio players on the same page, you can check out my code here – <a href="/posts/multiple-html5-audio-players">Multiple HTML5 Audio Players</a>.
