@@ -3,6 +3,7 @@ weight = -1
 date = "2014-05-04"
 title = "Building a Custom HTML5 Audio Player With Javascript"
 aliases = ["/html5-audio/building-a-custom-html5-audio-player-with-javascript/"]
+description = "Create a custom HTML5 audio player with JS, HTML, and CSS."
 +++
 
 This tutorial details how JavaScriptpt, HTML, and CSS can be used to make a custom HTML5 audio interface. It is divided into three sections.
@@ -180,5 +181,7 @@ The codepen below puts everything together.
 
 <p data-height="300" data-theme-id="5580" data-slug-hash="Kfgix" data-default-tab="result" data-user="katzkode" data-embed-version="2" data-pen-title="HTML5 Audio Player" class="codepen">See the Pen <a href="http://codepen.io/katzkode/pen/Kfgix/">HTML5 Audio Player</a> by Alex Katz (<a href="http://codepen.io/katzkode">@katzkode</a>) on <a href="http://codepen.io">CodePen</a>.</p>
 <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+
+[Complete Code on GitHub](https://github.com/alexanderkatz/HTML5-Audio)
 
 If you are interested in using multiple audio players on the same page, you can check out my code here – <a href="/posts/multiple-html5-audio-players">Multiple HTML5 Audio Players</a>.
