@@ -1,6 +1,6 @@
 header {
-    padding: 50px 0 50px 7%;
-    width: 84%;
+    padding: 50px 7% 50px 7%;
+    // width: 84%;
     height: 73px;
     display: flex;
     // Header Should Never Be Hidden
@@ -35,5 +35,13 @@ header {
 
     .header_link:hover {
         background: $electric;
+    }
+}
+
+@media all and (min-width:0px) and (max-width:873px){
+    header{
+        max-width: 750px;
+        margin: auto;
+        padding: 50px 1rem;
     }
 }

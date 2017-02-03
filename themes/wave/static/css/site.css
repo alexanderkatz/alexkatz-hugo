@@ -280,8 +280,7 @@ img.full {
   margin-left: auto !important; }
 
 header {
-  padding: 50px 0 50px 7%;
-  width: 84%;
+  padding: 50px 7% 50px 7%;
   height: 73px;
   display: flex; }
   header * {
@@ -306,6 +305,12 @@ header {
     transition: background 0.1s cubic-bezier(0.33, 0.66, 0.66, 1); }
   header .header_link:hover {
     background: #01FFC7; }
+
+@media all and (min-width: 0px) and (max-width: 873px) {
+  header {
+    max-width: 750px;
+    margin: auto;
+    padding: 50px 1rem; } }
 
 .highlight {
   margin: 15px 0px;
