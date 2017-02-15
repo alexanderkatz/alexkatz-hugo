@@ -286,7 +286,6 @@ header {
   header * {
     z-index: 9999; }
   header #logo {
-    background: url("../img/logo.svg") no-repeat;
     width: 73px;
     height: 64px; }
     header #logo a {
@@ -294,8 +293,6 @@ header {
       width: 100%;
       height: 100%;
       border: 0; }
-      header #logo a:hover {
-        background: url("../img/logo.svg") no-repeat; }
   header .header_link {
     font-family: robotobold;
     font-size: 20px;
@@ -348,3 +345,43 @@ header {
   #blurb h1 {
     font-size: 2.5rem;
     line-height: 3.75rem; } }
+
+svg {
+  padding-top: 1px; }
+
+#logo
+:hover .logo {
+  animation: draw-logo 2.5s 1;
+  transition: fill ease; }
+
+#logo
+:hover .circle {
+  animation: draw-circle 2.5s 1; }
+
+.logo {
+  fill: black;
+  stroke: black;
+  stroke-width: 3px;
+  stroke-dasharray: 3115px; }
+
+@keyframes draw-logo {
+  0% {
+    stroke-dashoffset: -3115;
+    fill: transparent; }
+  50% {
+    stroke-dashoffset: 0;
+    fill: transparent; }
+  100% {
+    fill: black; } }
+
+.circle {
+  fill: black;
+  stroke-dasharray: 80px; }
+
+@keyframes draw-circle {
+  0% {
+    fill: transparent; }
+  50% {
+    fill: transparent; }
+  100% {
+    fill: black; } }
