@@ -2,3 +2,7 @@ img.full{
   max-height: calc(100vh - 50px);
   max-width: 100%;
 }
+img.browser{
+    width: calc(100% - 40px);
+    margin-top: 2em;
+}

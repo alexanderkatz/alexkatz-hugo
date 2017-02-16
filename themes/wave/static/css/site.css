@@ -176,6 +176,11 @@ a {
     .portfolio .portfolio_item a:hover {
       background: rgba(212, 212, 212, 0); }
 
+img.browser {
+  background: #484848;
+  padding: 20px;
+  border-radius: 10px; }
+
 footer nav {
   border-top: solid #D8D8D8 1px; }
   footer nav div {
@@ -261,6 +266,10 @@ img.full {
   max-height: calc(100vh - 50px);
   max-width: 100%; }
 
+img.browser {
+  width: calc(100% - 40px);
+  margin-top: 2em; }
+
 .videoWrapper {
   position: relative;
   padding-bottom: 56.25%;
@@ -317,10 +326,6 @@ header {
   padding: 1rem 0px;
   overflow: auto;
   font-family: firamonoregular; }
-
-.post .full-img {
-  display: block;
-  width: 100%; }
 
 .home {
   width: 100%;
