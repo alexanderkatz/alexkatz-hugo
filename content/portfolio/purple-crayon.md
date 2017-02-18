@@ -9,7 +9,7 @@ Purple Crayon is a blogging platform I developed and designed with Ilona Brand. 
 
 <a class="link" href="https://github.com/alexanderkatz/node-blog">GitHub Repository</a>
 
-<img class="full" src="/img/purple-crayon/purplecrayon-mobile-1.png"/>
+<img class="full topmargin" src="/img/purple-crayon/purplecrayon-mobile-1.png"/>
 <img class="full browser" src="/img/purple-crayon/purplecrayon-desktop-1.png"/>
 <img class="full browser" src="/img/purple-crayon/purplecrayon-desktop-2.png"/>
 <img class="full browser" src="/img/purple-crayon/purplecrayon-desktop-3.png"/>
