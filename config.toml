@@ -9,3 +9,4 @@ canonifyURLs = true
 contentDir = "content"
 layoutDir = "layouts"
 publishDir = "public"
+PygmentsCodeFences = true
