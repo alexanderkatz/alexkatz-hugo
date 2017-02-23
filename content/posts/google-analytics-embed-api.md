@@ -23,19 +23,19 @@ To get a client ID we need to go to the <a title="Google Developers Console" hre
 
 Login to the Console and press the "Create Project" button. Give your project a name and a unique ID.
 
-<img class="alignnone wp-image-298 size-full" src="http://www.alexkatz.me/wp-content/uploads/2014/08/nameproject.png" alt="nameproject" width="515" height="281" />
+<!-- <img class="alignnone wp-image-298 size-full" src="http://www.alexkatz.me/wp-content/uploads/2014/08/nameproject.png" alt="nameproject" width="515" height="281" /> -->
 
 Now that we have created a project, we can enable the Analytics API.  To do so, click on the <strong>APIs</strong> link, which is nested under <strong>APIs and auth</strong> in the left sidebar.
 
 You should see a list of APIs.  Click on the <strong>off</strong> button to the right of the Analytics API, this will turn it on.
 
-<img class="alignnone wp-image-301 size-full" src="http://www.alexkatz.me/wp-content/uploads/2014/08/Screen-Shot-2014-08-22-at-1.05.18-PM-e1408729119445.png" alt="Screen Shot 2014-08-22 at 1.05.18 PM" width="579" height="267" />
+<!-- <img class="alignnone wp-image-301 size-full" src="http://www.alexkatz.me/wp-content/uploads/2014/08/Screen-Shot-2014-08-22-at-1.05.18-PM-e1408729119445.png" alt="Screen Shot 2014-08-22 at 1.05.18 PM" width="579" height="267" /> -->
 
 After enabling the Analytics API, click on <strong>Credentials</strong>, which is under <strong>APIs</strong>.
 
 Click the blue, <strong>Create New Client ID</strong>, button.
 
-<img class="alignnone size-full wp-image-304" src="http://www.alexkatz.me/wp-content/uploads/2014/08/Screen-Shot-2014-08-22-at-1.06.25-PM.png" alt="Screen Shot 2014-08-22 at 1.06.25 PM" width="514" height="605" />
+<!-- <img class="alignnone size-full wp-image-304" src="http://www.alexkatz.me/wp-content/uploads/2014/08/Screen-Shot-2014-08-22-at-1.06.25-PM.png" alt="Screen Shot 2014-08-22 at 1.06.25 PM" width="514" height="605" /> -->
 
 You see where it says JavaScript origins. This needs to be set to your domain. Do not include any paths.
 
