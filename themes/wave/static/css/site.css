@@ -56,7 +56,8 @@ body {
 
 h1 {
   font-family: firamonobold;
-  font-size: 48px; }
+  font-size: 48px;
+  line-height: 3rem; }
 
 h2 {
   font-family: firamonobold;
@@ -327,32 +328,43 @@ header {
   overflow: auto;
   font-family: firamonoregular; }
 
-.home {
+.homepage header a {
+  color: white; }
+
+.homepage .bg-wrapper {
   width: 100%;
   height: 100%;
   position: fixed;
   top: 0;
-  background: url("../img/homebackground.png") 65% bottom;
+  background: url("../img/home/monkeyflip@0.5x.jpg") 65% 90%;
   background-size: cover;
   display: flex; }
 
-#blurb {
+.homepage #blurb {
+  color: white;
   align-self: center;
   padding-left: 7%; }
-  #blurb h1 {
-    font-family: firamonobold;
-    line-height: 5rem;
-    font-size: 3.5rem; }
+
+.homepage footer a {
+  color: white; }
 
 @media all and (max-width: 599px) {
+  .home {
+    background: url("../img/home/monkeyflip@0.2x.jpg") 65% 90%;
+    background-size: cover; }
   #blurb h1 {
-    font-size: 1.75rem;
-    line-height: 2.5rem; } }
+    font-size: 2rem;
+    line-height: 3rem; } }
 
 @media all and (min-width: 600px) and (max-width: 1000px) {
   #blurb h1 {
     font-size: 2.5rem;
     line-height: 3.75rem; } }
+
+@media all and (min-width: 1001px) {
+  #blurb h1 {
+    font-size: 3.5rem;
+    line-height: 5rem; } }
 
 svg {
   padding-top: 1px; }
@@ -367,8 +379,8 @@ svg {
   animation: draw-circle 2.5s 1; }
 
 .logo {
-  fill: black;
-  stroke: black;
+  fill: #01FFC7;
+  stroke: #01FFC7;
   stroke-width: 3px;
   stroke-dasharray: 3115px; }
 
@@ -380,10 +392,10 @@ svg {
     stroke-dashoffset: 0;
     fill: transparent; }
   100% {
-    fill: black; } }
+    fill: #01FFC7; } }
 
 .circle {
-  fill: black;
+  fill: #01FFC7;
   stroke-dasharray: 80px; }
 
 @keyframes draw-circle {
@@ -392,4 +404,4 @@ svg {
   50% {
     fill: transparent; }
   100% {
-    fill: black; } }
+    fill: #01FFC7; } }

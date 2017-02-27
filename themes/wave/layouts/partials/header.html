@@ -2,16 +2,12 @@
 <html>
 <head>
   <title>{{ .Title }}</title>
-  <meta name="description" content="{{if .Description }}.Description{{else}}Alex Katz's personal site.{{end}}">
-  <!-- {{ if .Description }} .Description
-  {{else}}
-    BY
-  {{ end }} -->
+  <meta name="description" content="{{if .Description }}{{.Description}}{{else}}Alex Katz's portfolio and blog.{{end}}">
   <link rel="stylesheet" type="text/css" href="/css/site.css">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
-<div id="wrapper">
+<div id="wrapper" class="{{if .IsHome }}homepage{{else}}{{end}}">
   <header>
     <!-- <div id="logo"><a href="{{ .Site.BaseURL }}"></a></div> -->
     <div id="logo"><a href="{{ .Site.BaseURL }}">

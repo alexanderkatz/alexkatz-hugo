@@ -1,4 +1,5 @@
 // Logo SVG Animation
+$color: $electric;
 
 svg {
   padding-top:1px;
@@ -16,8 +17,8 @@ svg {
 }
 
 .logo{
-  fill: black;
-  stroke: black;
+  fill: $color;
+  stroke: $color;
   stroke-width: 3px;
   stroke-dasharray:3115px;
 }
@@ -34,12 +35,12 @@ svg {
 
   }
   100%{
-    fill:black;
+    fill:$color;
   }
 }
 
 .circle{
-  fill:black;
+  fill:$color;
   // stroke:black;
   // stroke-width: 3px;
   stroke-dasharray:80px;
@@ -53,6 +54,6 @@ svg {
       fill:rgba(0,0,0,0);
   }
   100%{
-      fill:black;
+      fill:$color;
   }
 }
