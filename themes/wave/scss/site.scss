@@ -2,11 +2,17 @@
 
 @import 'base/index';
 @import 'typography/index';
-@import 'style/index';
-@import 'layout/index';
 
-@import 'flex.scss';
-@import 'header.scss';
+@import 'flex';
+@import 'header';
+@import 'footer';
 @import 'code.scss';
 @import 'home.scss';
 @import 'logoanimation';
+@import 'video';
+@import 'images';
+@import 'portfoliolist';
+@import 'postlist';
+@import 'listtext';
+@import 'posttext';
+
