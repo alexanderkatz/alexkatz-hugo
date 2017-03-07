@@ -325,6 +325,9 @@ img.browser {
   box-shadow: 0px 10px 25px  #484848;
   border-radius: 10px; }
 
+.sidebyside {
+  display: flex; }
+
 .portfolio {
   -moz-column-width: 13em;
   -webkit-column-width: 13em;
