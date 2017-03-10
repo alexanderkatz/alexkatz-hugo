@@ -13,6 +13,8 @@ My first thought was to use JavaScript, loop through each element, and populate 
 }
 {{< /highlight >}}
 
+<!--more-->
+
 Using the empty selector and the pseudo element before, placeholder text can be defined using the CSS `content` property. The `:before` element is used because the `content` property only works with pseudo elements.
 
 ### My Use Case
