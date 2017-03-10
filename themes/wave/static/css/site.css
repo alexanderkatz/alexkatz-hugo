@@ -216,6 +216,12 @@ footer {
       align-self: center;
       text-align: center; }
 
+code {
+  font-family: firamonoregular;
+  color: #F4F4F4;
+  background: #272822;
+  font-size: .9rem; }
+
 .highlight {
   margin: 15px 0px;
   padding: 1rem 0px;
