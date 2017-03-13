@@ -3,6 +3,7 @@ date = "2017-01-01T14:00:04-05:00"
 title = "Kinect"
 assets = "kinect"
 size = "std"
+filter = "code"
 +++
 
 During my junior year I decided to take a break from all things web and to focus my energy on combining my two passions, coding and dance. I designed a private study in which I created a dance piece that utilized a dancer’s motion to manipulate and generate audio. I used a Kinect to capture video and processed it using Synapse and MAX.

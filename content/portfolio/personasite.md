@@ -3,6 +3,7 @@ date = "2017-01-01T14:00:25-05:00"
 title = "Personas Site"
 assets = "personas-site"
 size = "std"
+filter = "code"
 +++
 
 <a class="link" href="#attribution">Property of IBM</a> 
