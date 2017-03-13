@@ -20,15 +20,20 @@ function filter(e) {
 
     // Show All
     if (selected == 'all') {
+        document.querySelector('.portfolio').style.height = "";    
         var items = document.querySelectorAll(".portfolio_item");
-        console.log("all", items)
         forEach(items, show);
     } else {
 
         // Show Selected Category
         var items = document.querySelectorAll(".portfolio_item." + selected);
         forEach(items, show);
-
+        // Adjust height so items are distributed across available coloumns
+        
+        if (items.length <= 5){ //or column count;
+            document.querySelector('.portfolio').style.height = "500px";    
+        }
+        
         // Hide Other Categories
         var toHide = categoriesToHide(selected, categories);
         var query = '';

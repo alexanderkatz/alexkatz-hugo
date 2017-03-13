@@ -1,5 +1,12 @@
 // Portfolio Grid Styling
 
+.filters{
+    max-width: 1260px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    
+}
+
 .portfolio {
     -moz-column-width: 13em;
     -webkit-column-width: 13em;
@@ -9,6 +16,8 @@
     margin: 2rem auto;
     padding-left: 1rem;
     padding-right: 1rem;
+    // if portfolio items < 5 
+    // max-height: 500px;
 }
 
 .portfolio_item {

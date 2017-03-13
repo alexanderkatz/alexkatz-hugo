@@ -335,6 +335,11 @@ img.browser {
 .sidebyside {
   display: flex; }
 
+.filters {
+  max-width: 1260px;
+  margin: 2rem auto;
+  padding: 0 1rem; }
+
 .portfolio {
   -moz-column-width: 13em;
   -webkit-column-width: 13em;
