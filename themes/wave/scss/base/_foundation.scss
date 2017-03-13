@@ -1,26 +1,22 @@
-$lagoon: #0F758C;
-$electric: #01FFC7;
-$lightelectric: rgba(2, 255, 198, .5);
-$text: #484848;
-$background: #F4F4F4;
-
 html {
   height: 100%;
   font-size: 18px;
   font-family: robotoregular;
   line-height: 1.5rem;
-  color:#484848;
-  background: #F4F4F4;
+  color: $text;
+  background: $background;
 }
 body{
   height: 100%;
 }
+//  Used to help position footer
 #wrapper{
   min-height: 100%;
   position:relative;
   overflow: hidden;
 }
 
+// Typography
 h1 {
     font-family: firamonobold;
     font-size: 48px;
@@ -30,7 +26,6 @@ h1 {
 h2 {
     font-family: firamonobold;
     font-size: 36px;
-    // line-height: 63px;
 }
 
 h3 {
@@ -48,7 +43,6 @@ h6 {
     font-family: robotoregular;
     font-size: .75rem;
 }
-
 p {
     font-family: robotoregular;
     font-size: 1rem;

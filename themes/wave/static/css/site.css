@@ -83,32 +83,6 @@ p {
   line-height: 1.5rem;
   margin-bottom: .75rem; }
 
-a {
-  color: #484848; }
-
-.link, .post a {
-  border-bottom: 3px solid #01FFC7;
-  color: inherit;
-  transition: background 0.1s cubic-bezier(0.33, 0.66, 0.66, 1); }
-  .link:hover, .post a:hover {
-    background: #01FFC7; }
-
-/* Base Layout For Site */
-.padding {
-  padding-bottom: 150px; }
-
-.center-block {
-  margin: auto;
-  max-width: 750px;
-  padding-left: 1rem;
-  padding-right: 1rem; }
-
-.page-title {
-  margin-bottom: 2rem; }
-
-.topmargin {
-  margin-top: 2em; }
-
 @font-face {
   font-family: 'firamonobold';
   src: url("../fonts/FiraMono-Bold.otf");
@@ -163,6 +137,22 @@ a {
   font-weight: normal;
   font-style: normal; }
 
+/* Utility Classes */
+.padding {
+  padding-bottom: 150px; }
+
+.center-block {
+  margin: auto;
+  max-width: 750px;
+  padding-left: 1rem;
+  padding-right: 1rem; }
+
+.page-title {
+  margin-bottom: 2rem; }
+
+.topmargin {
+  margin-top: 2em; }
+
 .push-right {
   margin-left: auto !important; }
 
@@ -216,10 +206,20 @@ footer {
       align-self: center;
       text-align: center; }
 
+a {
+  color: #484848; }
+
+.link, .post a {
+  border-bottom: 3px solid #01FFC7;
+  color: inherit;
+  transition: background 0.1s cubic-bezier(0.33, 0.66, 0.66, 1); }
+  .link:hover, .post a:hover {
+    background: #01FFC7; }
+
 code {
   font-family: firamonoregular;
   color: #F4F4F4;
-  background: #272822;
+  background: #484848;
   font-size: .9rem; }
 
 .highlight {
@@ -228,6 +228,7 @@ code {
   overflow: auto;
   font-family: firamonoregular; }
 
+/* _home.scss */
 .homepage header a {
   color: white; }
 

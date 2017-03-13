@@ -1,8 +1,9 @@
+@import './base/variables.scss';
 // inline code
 code{
   font-family: firamonoregular;
   color: $background;
-  background: #272822;
+  background: $text;
   font-size: .9rem;
 }
 
