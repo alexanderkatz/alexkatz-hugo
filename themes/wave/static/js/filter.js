@@ -30,8 +30,9 @@ function filter(e) {
         forEach(items, show);
         // Adjust height so items are distributed across available coloumns
         
+        // this needs to be more robust, take into account screen size 
         if (items.length <= 5){ //or column count;
-            document.querySelector('.portfolio').style.height = "500px";    
+            // document.querySelector('.portfolio').style.height = "500px";    
         }
         
         // Hide Other Categories

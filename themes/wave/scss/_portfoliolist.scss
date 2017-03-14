@@ -4,7 +4,19 @@
     max-width: 1260px;
     margin: 2rem auto;
     padding: 0 1rem;
-    
+    button{
+        color:$filter;
+        background:$background;
+        border: solid $filter 1px;
+        border-radius: 10px;
+        transition: all .25s;
+        outline: none;
+        &:focus{
+            color:$background;
+            background: $filter;
+            
+        }
+    }
 }
 
 .portfolio {
@@ -44,7 +56,7 @@
         font-family: firamonobold;
         &:hover {
             color: white;
-            background: rgba(17,44,88,.8);
+            background: $tile-hover;
         }
         // position link text
         span {
