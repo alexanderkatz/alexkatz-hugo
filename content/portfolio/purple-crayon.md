@@ -3,6 +3,7 @@ date = "2017-01-01T14:01:10-05:00"
 title = "Purple Crayon"
 assets = "purple-crayon"
 size = "std"
+filter = "code"
 +++
 
 Purple Crayon is a blogging platform I developed and designed with Ilona Brand. We used Node, express, and Passport along with other technologies.

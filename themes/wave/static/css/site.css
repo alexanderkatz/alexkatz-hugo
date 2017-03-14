@@ -335,6 +335,21 @@ img.browser {
 .sidebyside {
   display: flex; }
 
+.filters {
+  max-width: 1260px;
+  margin: 2rem auto;
+  padding: 0 1rem; }
+  .filters button {
+    color: #112c58;
+    background: #F4F4F4;
+    border: solid #112c58 1px;
+    border-radius: 10px;
+    transition: all .25s;
+    outline: none; }
+    .filters button:focus {
+      color: #F4F4F4;
+      background: #112c58; }
+
 .portfolio {
   -moz-column-width: 13em;
   -webkit-column-width: 13em;

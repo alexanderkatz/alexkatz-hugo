@@ -3,6 +3,7 @@ date = "2017-01-01T14:00:25-05:00"
 title = "Animation"
 assets = "animation"
 size = "poster"
+filter = "code"
 +++
 
 Here is an animation I made recently. In the near future I will add more experiments and the ability to pause and play animations.
