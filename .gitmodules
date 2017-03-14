@@ -3,4 +3,4 @@
 	url = https://github.com/alexanderkatz/alexanderkatz.github.io.git
 [submodule "themes/curlew"]
 	path = themes/curlew
-	url = git@github-PERSONAL:alexanderkatz/curlew.git
+	url = https://github.com/alexanderkatz/curlew
