@@ -11,6 +11,7 @@
         border-radius: 10px;
         transition: all .25s;
         outline: none;
+        // Should be set through js
         &:focus{
             color:$background;
             background: $filter;
