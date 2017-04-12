@@ -3,11 +3,15 @@ title = "Binary Search Tree"
 date = "2017-04-08"
 +++
 
+This post will discuss how to connect a BST implementation to d3.js.
+
 I recently implemented a Binary Search Tree in JavaScript. It was a fun exercise and a great opportunity to use ES6 Classes.
 
-Although I implemented insertion, removal, and a few other operations, this post will focus on insertion and how I connected it to d3.js.
+Below is my code for the Binary Search Tree class, Node class, and their insertion methods. 
 
-Here is my code for the Binary Search Tree class, Node class, and their insertion functions.
+<!-- My complete implementation which includes node removal is [here](link). -->
+
+<!--more-->
 
 {{< highlight javascript >}}
 /* Binary Search Tree Class */
@@ -40,7 +44,7 @@ class Node {
     insert(node) {
         if (node.value == this.value) {
             return false;
-        // Check Left    
+        // check left subtree    
         } else if (node.value < this.value) {
             if (this.left != null) {
                 return this.left.insert(node);
@@ -49,7 +53,7 @@ class Node {
                 node.parent = this;
                 return true;
             }
-        // Check Right    
+        // check right subtree
         } else {
             if (this.right != null) {
                 return this.right.insert(node);
@@ -63,230 +67,140 @@ class Node {
 }
 {{</ highlight >}}
 
-Here is the code for a vertical tree in d3.js. 
+After I finished my implementation I decided to use d3.js to visualize my BST. 
+
+To start I adapted [d3noob's block](https://bl.ocks.org/d3noob/43a860bc0024792f8803bba8ca0d5ecd) to make a program that visualized a vertical tree from a hardcoded dataset.
+
+<p data-height="550" data-theme-id="5580" data-slug-hash="ZegQQB" data-default-tab="result" data-user="katzkode" data-embed-version="2" data-pen-title="D3.js Vertical Tree" class="codepen">See the Pen <a href="http://codepen.io/katzkode/pen/ZegQQB/">D3.js Vertical Tree</a> by Alex Katz (<a href="http://codepen.io/katzkode">@katzkode</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+
+In order to visualize a tree with d3.js, the following occurs:
+
+1. The SVG is configured.
+2. A d3 tree layout is initialized
+3. A call is made to d3.hierarchy
+4. The nodes are drawn
+5. The links are drawn
+
+Even though there are a number of steps, only one part of the code needs to be altered to visualize an instance of my BST. This is the the call to `d3.hierarchy`.
 
 {{< highlight javascript >}}
-
-var treeData = {
-    "value": 25,
-    "children": [{
-            "value": 10,
-            "parent": 25,
-            "children": [{
-                    "value": 7,
-                    "parent": 10,
-                },
-                { "value": 15,
-                  "parent": 10 }]
-               },
-               { "value": 50,
-                 "parent": 25
-               }]
-};
-
-
-// Set dimensions and margins for diagram
-var margin = {top: 80, bottom: 80},
-    width = 800,
-    height = 600 - margin.top - margin.bottom;
-    
-// append the svg object to the body of the page
-// appends a 'group' element to 'svg'
-// moves the 'group' element to the top left margin   
-var svg = d3.select("body").append("svg")
-    .attr("width", "100%")
-    .attr("height", height + margin.top + margin.bottom)
-    .attr("viewBox","0 0 800 600")
-    .append("g")
-    .attr("transform", "translate(0," + margin.top + ")");
-                
-var i = 0,      
-    duration = 750,
-    root;
-
-// Declares a tree layout and assigns the size
-var treemap = d3.tree().size([width, height]);
-
-// Assigns parent, children, height, depth
 root = d3.hierarchy(treeData, function(d){ 
-    console.log(d.children)
     return d.children; 
 });
-
-root.x0 = width / 2;
-root.y0 = 0;
-
-console.log(root);
-
-// Collapse after the second level
-root.children.forEach(collapse);
-
-update(root);
-
-// Collapse the node and all it's children
-function collapse(d){
-    if(d.children){
-        d._children = d.children
-        d._children.forEach(collapse)
-        d.children = null;
-    }
-}
-
-// Update
-function update(source){
-    // Assigns the x and y position for the nodes
-    var treeData = treemap(root);
-    
-    // Compute the new tree layout.
-    var nodes = treeData.descendants(),
-        links = treeData.descendants().slice(1);
-        
-    // Normalize for fixed-depth
-    nodes.forEach(function(d){ d.y = d.depth*100 });    
-    
-    // **************** Nodes Section ****************
-    
-    // Update the nodes...
-    var node = svg.selectAll('g.node')
-         .data(nodes, function(d) {return d.id || (d.id = ++i); });
-         
-    // Enter any new nodes at the parent's previous position.
-    var nodeEnter = node.enter().append('g')
-                     .attr('class', 'node')
-                     .attr("transform", function(d){
-                         return "translate(" + source.x0 + "," + source.y0 + ")";
-                     })
-                     .on('click', click);
-                     
-    // Add Circle for the nodes
-    nodeEnter.append('circle')
-        .attr('class', 'node')
-        .attr('r', 1e-6)
-        .style("fill", function(d){
-            return d._children ? "lightsteelblue" : "#fff";
-        });
-    
-    // Add labels for the nodes
-    nodeEnter.append('text')
-        .attr("dy", ".35em")
-        .attr("x", function(d){
-            return d.children || d._children ? -13 : 13;
-        })
-        .attr("text-anchor", function(d){
-            return d.children || d._children ? "end" : "start";
-        })
-        .text(function(d){ return d.data.value; });
-    
-    // Update
-    var nodeUpdate = nodeEnter.merge(node);
-    
-    // Transition to the proper position for the nodes
-    nodeUpdate.transition()
-        .duration(duration)
-        .attr("transform", function(d) {
-            return "translate(" + d.x + "," + d.y + ")";
-        });
-    
-    // Update the node attributes and style
-    nodeUpdate.select('circle.node')
-        .attr('r', 10)
-        .style("fill", function(d){
-            return d._children ? "lightsteelblue" : "#fff";
-        })
-        .attr('cursor', 'pointer');
-        
-    // Remove any exiting nodes
-    nodeExit = node.exit().transition()
-        .duration(duration)
-        .attr("transform", function(d){
-            return "translate(" + source.x +","+ source.y +")";
-        })
-        .remove();
-        
-    // On exit reduce the node circles size to 0
-    nodeExit.select('circle')
-        .attr('r', 1e-6);
-    
-    // On exit reduce the opacity of text lables  
-    nodeExit.select('text')
-        .style('fill-opacity', 1e-6)
-        
-    // **************** Links Section ****************
-    
-    // Update the links...
-    var link = svg.selectAll('path.link')
-        .data(links, function(d){ return d.id; });
-        
-    // Enter any new links at the parent's previous position
-    var linkEnter = link.enter().insert('path', "g")
-        .attr("class", "link")
-        .attr('d', function(d){
-            var o = {x: source.x0, y: source.y0};
-            return diagonal(o,o);
-        });
-    
-    // Update
-    var linkUpdate = linkEnter.merge(link);
-    
-    // Transition back to the parent element position
-    linkUpdate.transition()
-        .duration(duration)
-        .attr('d', function(d){ return diagonal(d, d.parent) });
-    
-    // Remove any existing links
-        var linkExit = link.exit().transition()
-            .duration(duration)
-            .attr('d', function(d){
-                var o = {x: source.x, y: source.y};
-            })
-            .remove();
-    
-    // Store the old positions for transition.
-    nodes.forEach(function(d){
-        d.x0 = d.x;
-        d.y0 = d.y;
-    });
-    
-    // Create a curved (diagonal) path from parent to the child nodes
-    function diagonal(s,d){
-        path = `M ${s.x} ${s.y}
-        C ${(s.x + d.x) / 2} ${s.y},
-          ${(s.x + d.x) / 2} ${d.y},
-          ${d.x} ${d.y}`
-
-        return path;
-    }
-
-    // Toggle children on click
-    function click(d){
-        if (d.children){
-            d._children = d.children;
-            d.children = null;
-        }
-        else{
-            d.children = d._children;
-            d._children = null;
-        }
-        update(d);
-    }
-}
 {{</ highlight>}}
 
-After setting up the d3 vertical tree code, I naively replaced `treeData` with my BST and passed it to `d3.hierarchy`. This did not work.
+The function `d3.hierarchy(data, children)` takes in two parameters.
 
-d3-hierarchy is a module within d3 that visualizes hierarchical data.
+1. An object that represents the root node of a dataset
+2. Children accessor function
 
-- data needs to be in hierarchical form
-- what does that mean? I thought my data structure was in hierarchical form.
-- how I changed the insertion method
+d3.hierarchy starts with the root and invokes the accessor function for each node. The accessor function must return an array of children or null if there are no children. Each node is given the properties: data, depth, height, parent, children, and value. 
 
-- this worked well, but for nodes that only had a single child, the child hung directly under the parent
-- I thought about changing the coordinates of these nodes, by first identifying single children and adjusting them accordingly, but realized that if they had a dummy sibling they would be positioned correctly
-- I augmented my code to support dummy children and gave them the class hidden
-- This allowed me to hide the dummy children and give a correctly visualized BST
+`hierarchy` returns the root node.
+
+The first part of the hierarchy that needs to be changed is the data. Instead of passing the original hardcoded data set, pass a BST instance's root node.  
+
+{{< highlight javascript >}}
+// Assigns parent, children, height, depth
+root = d3.hierarchy(bstInstance.root, function(d){ 
+    return d.children; 
+});
+{{</ highlight>}}
+
+This code will run, but the visualization will only have a single node, the root. To solve this issue change the children accessor function so that it puts `d.left` and `d.right` into the children array for each node or datum. 
+
+{{< highlight javascript>}}
+root = d3.hierarchy(treeData, function(d){
+
+d.children=[];
+        if (d.left){
+            d.children.push(d.left);
+        }
+        if (d.right){
+            d.children.push(d.right);
+        }
+        return d.children; 
+});
+{{</ highlight>}}
+
+While this approach correctly assigns children to each node, it does not maintain whether a child is a left or right child. If a node has no siblings it will be displayed directly beneath its parent.
+
+<img class="full" src="/img/posts/binary-search-tree/single-child.png"/>
+
+Instead of explicitly changing the coordinates of these nodes, I create a dummy node for each node without a sibling. If an only child is a right child, I insert the dummy node before it. If the only child is a left child, I insert the dummy node after it. This ensures that the children are correctly positioned in relation to their parent. 
+
+I used an XOR function to determine if a node had a single child. 
+
+{{< highlight javascript>}}
+function myXOR(a,b) {
+    return ( a || b ) && !( a && b );
+}
+{{</highlight>}}
+
+{{< highlight javascript>}}
+root = d3.hierarchy(treeData, function(d){
+        d.children=[];
+        if (d.left){
+            d.children.push(d.left);
+            if (myXOR(d.left, d.right)){
+                d.children.push(new Node("e"));
+            }
+        }
+        if (d.right){
+            if (myXOR(d.left, d.right)){
+                d.children.push(new Node("e"));
+            }
+            d.children.push(d.right);
+        }
+        return d.children; 
+    });
+    
+{{</ highlight >}}
+    
+<img class="full" src="/img/posts/binary-search-tree/dummy-node.png"/>
+    
+This works great, but the dummy nodes need to be hidden. To hide the dummy nodes I add the class "hidden" to all nodes with a NAN value. Depending on value's type in your BST, you may need to change to replace the `isNAN` condition.
+
+{{< highlight javascript>}}
+nodeEnter.append('circle')
+            .attr('class', function(d) {
+                if (isNaN(d.value)) {
+                    return "node hidden";
+                }
+                return 'node';
+            })
+            .attr('r', 1e-6)
+            .style("fill", function(d) {
+                return d._children ? "lightsteelblue" : "#fff";
+            });
+{{</ highlight >}}
+            
+I do the same for links.
+            
+{{< highlight javascript>}}
+// Enter any new links at the parent's previous position
+var linkEnter = link.enter().insert('path', "g")
+    .attr("class", function(d) {
+        if (isNaN(d.value)) {
+            return "link hidden "
+        }
+        return "link";
+    })            
+{{</ highlight >}}
+
+Then I added the following to my CSS to hide the dummy nodes and links!
+
+{{< highlight css>}}
+.hidden{display: none;}
+{{</ highlight >}}
+
+The .hidden links and nodes are grayed out in the example below.
+
+<p data-height="486" data-theme-id="5580" data-slug-hash="EWJxPv" data-default-tab="result" data-user="katzkode" data-embed-version="2" data-pen-title="D3 Binary Search Tree" class="codepen">See the Pen <a href="http://codepen.io/katzkode/pen/EWJxPv/">D3 Binary Search Tree</a> by Alex Katz (<a href="http://codepen.io/katzkode">@katzkode</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
 
 ## Notes:
 
 After completing my initial BST implementation, I consulted [Algolist](http://www.algolist.net/Data_structures/Binary_search_tree/Insertion) for some ideas on how to clean up my code. I particularly like how they have an insertion method in the BST and Node class. This allows for insertion to be called directly on a node or tree instance. This was cleaner than my method of passing the value to be inserted and a root node to insert().
  
-I adapted [d3noob's block](https://bl.ocks.org/d3noob/43a860bc0024792f8803bba8ca0d5ecd) for the vertical tree.

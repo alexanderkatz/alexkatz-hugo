@@ -10,3 +10,4 @@ contentDir = "content"
 layoutDir = "layouts"
 publishDir = "public"
 PygmentsCodeFences = true
+pygmentsstyle = "friendly"
