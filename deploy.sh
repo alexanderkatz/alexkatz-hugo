@@ -2,14 +2,21 @@
 
 echo -e "\033[0;32mDeploying updates to GitHub...\033[0m"
 
+# Go To Public folder
+cd public
+
+# Remove all files and folders except for CNAME and .git
+find . -not -path "./.git/*" -not -name ".git" -not -name "CNAME" -not -name ".*" -print0 | xargs -0 rm -r  --
+
+# Go to site root
+cd ..
+
 # Build the project.
 hugo -t curlew # if using a theme, replace by `hugo -t <yourtheme>`
 
 # Go To Public folder
 cd public
 
-# Remove all files and folders except for CNAME and .git
-find . -not -path "./.git/*" -not -name ".git" -not -name "CNAME" -not -name ".*" -print0 | xargs -0 rm -r  --
 
 # Add changes to git.
 git add -A
