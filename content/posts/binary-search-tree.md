@@ -99,7 +99,7 @@ d3.hierarchy starts with the root and invokes the accessor function for each nod
 
 `hierarchy` returns the root node.
 
-The first part of the hierarchy that needs to be changed is the data. Instead of passing the original hardcoded data set, pass a BST instance's root node.  
+The first part of the hierarchy call that needs to be changed is the data. Instead of passing the original hardcoded data set, pass a BST instance's root node.  
 
 {{< highlight javascript >}}
 // Assigns parent, children, height, depth
