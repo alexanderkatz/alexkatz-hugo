@@ -93,9 +93,9 @@ root = d3.hierarchy(treeData, function(d){
 The function `d3.hierarchy(data, children)` takes in two parameters.
 
 1. An object that represents the root node of a dataset
-2. Children accessor function
+2. A children accessor function
 
-d3.hierarchy starts with the root and invokes the accessor function for each node. The accessor function must return an array of children or null if there are no children. Each node is given the properties: data, depth, height, parent, children, and value. 
+d3.hierarchy starts with the root and invokes the accessor function for each node. The accessor function must return an array of children or null if there are no children. The hierarchy function gives each node the properties: data, depth, height, parent, children, and value. 
 
 `hierarchy` returns the root node.
 
@@ -160,7 +160,7 @@ root = d3.hierarchy(treeData, function(d){
     
 <img class="full" src="/img/posts/binary-search-tree/dummy-node.png"/>
     
-This works great, but the dummy nodes need to be hidden. To hide the dummy nodes I add the class "hidden" to all nodes with a NAN value. Depending on value's type in your BST, you may need to change to replace the `isNAN` condition.
+This works great, but the dummy nodes need to be hidden. To hide the dummy nodes I add the class "hidden" to all nodes with a NAN value. Depending on value's type in your BST, you may need to change the `isNAN` condition.
 
 {{< highlight javascript>}}
 nodeEnter.append('circle')
