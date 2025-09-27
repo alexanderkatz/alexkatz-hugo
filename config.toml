@@ -1,13 +1,25 @@
 theme = "curlew"
-# baseurl = "alexkatz.me"
-baseurl = "https://alexanderkatz.github.io/"
+
+# If you use your GitHub Pages user site:
+baseURL = "https://alexanderkatz.github.io/"
+# If you switch to your custom domain later, change to:
+# baseURL = "https://alexkatz.me/"
+
 languageCode = "en-us"
 title = "Alex Katz"
-MetaDataFormat = "toml"
 
+# Helps ensure absolute URLs on GitHub Pages; keep true for now.
 canonifyURLs = true
+# You likely do NOT need relative URLs for a user site; leave it off unless assets fail.
+# relativeURLs = true
+
 contentDir = "content"
 layoutDir = "layouts"
 publishDir = "public"
-PygmentsCodeFences = true
-pygmentsstyle = "friendly"
+
+# Modern syntax highlighting (replace old Pygments settings):
+[markup]
+  [markup.highlight]
+    noClasses = false        # use CSS classes (preferred for themes)
+    style = "friendly"       # roughly matches your previous pygmentsstyle
+    guessSyntax = true
