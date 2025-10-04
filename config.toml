@@ -1,9 +1,9 @@
 theme = "curlew"
 
 # If you use your GitHub Pages user site:
-baseURL = "https://alexanderkatz.github.io/"
+# baseURL = "https://alexanderkatz.github.io/"
 # If you switch to your custom domain later, change to:
-# baseURL = "https://alexkatz.me/"
+ baseURL = "https://alexkatz.me/"
 
 languageCode = "en-us"
 title = "Alex Katz"
