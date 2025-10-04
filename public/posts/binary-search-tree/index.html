@@ -29,6 +29,7 @@
     <p>This post will discuss how to connect a BST implementation to d3.js.</p>
 <p>I recently implemented a Binary Search Tree in JavaScript. It was a fun exercise and a great opportunity to use ES6 Classes.</p>
 <p>Below is my code for the Binary Search Tree class, Node class, and their insertion methods.</p>
+<!-- My complete implementation which includes node removal is [here](link). -->
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="cm">/* Binary Search Tree Class */</span>
 </span></span><span class="line"><span class="cl"><span class="kr">class</span> <span class="nx">BinarySearchTree</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">    <span class="c1">// constructor
@@ -82,7 +83,8 @@
 </span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre></div>
 <p>After I finished my implementation I decided to use d3.js to visualize my BST.</p>
 <p>To start I adapted <a href="https://bl.ocks.org/d3noob/43a860bc0024792f8803bba8ca0d5ecd">d3noob&rsquo;s block</a> to make a program that visualized a vertical tree from a hardcoded dataset.</p>
-<!-- raw HTML omitted -->
+<p data-height="550" data-theme-id="5580" data-slug-hash="ZegQQB" data-default-tab="result" data-user="katzkode" data-embed-version="2" data-pen-title="D3.js Vertical Tree" class="codepen">See the Pen <a href="http://codepen.io/katzkode/pen/ZegQQB/">D3.js Vertical Tree</a> by Alex Katz (<a href="http://codepen.io/katzkode">@katzkode</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
 <p>In order to visualize a tree with d3.js, the following occurs:</p>
 <ol>
 <li>The SVG is configured.</li>
@@ -120,7 +122,7 @@
 </span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="nx">d</span><span class="p">.</span><span class="nx">children</span><span class="p">;</span> 
 </span></span><span class="line"><span class="cl"><span class="p">});</span></span></span></code></pre></div>
 <p>While this approach correctly assigns children to each node, it does not maintain whether a child is a left or right child. If a node has no siblings it will be displayed directly beneath its parent.</p>
-<!-- raw HTML omitted -->
+<img class="full" src="http://localhost:1313/img/posts/binary-search-tree/single-child.png"/>
 <p>Instead of explicitly changing the coordinates of these nodes, I create a dummy node for each node without a sibling. If an only child is a right child, I insert the dummy node before it. If the only child is a left child, I insert the dummy node after it. This ensures that the children are correctly positioned in relation to their parent.</p>
 <p>I used an XOR function to determine if a node had a single child.</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="kd">function</span> <span class="nx">myXOR</span><span class="p">(</span><span class="nx">a</span><span class="p">,</span><span class="nx">b</span><span class="p">)</span> <span class="p">{</span>
@@ -144,7 +146,7 @@
 </span></span><span class="line"><span class="cl">    <span class="p">});</span>
 </span></span><span class="line"><span class="cl">    
 </span></span></code></pre></div>
-<!-- raw HTML omitted -->
+<img class="full" src="http://localhost:1313/img/posts/binary-search-tree/dummy-node.png"/>
 <p>This works great, but the dummy nodes need to be hidden. To hide the dummy nodes I add the class &ldquo;hidden&rdquo; to all nodes with a NAN value. Depending on value&rsquo;s type in your BST, you may need to change the <code>isNAN</code> condition.</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="nx">nodeEnter</span><span class="p">.</span><span class="nx">append</span><span class="p">(</span><span class="s1">&#39;circle&#39;</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl">            <span class="p">.</span><span class="nx">attr</span><span class="p">(</span><span class="s1">&#39;class&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">d</span><span class="p">)</span> <span class="p">{</span>
@@ -170,7 +172,8 @@
 <p>Then I added the following to my CSS to hide the dummy nodes and links!</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-css" data-lang="css"><span class="line"><span class="cl"><span class="p">.</span><span class="nc">hidden</span><span class="p">{</span><span class="k">display</span><span class="p">:</span> <span class="kc">none</span><span class="p">;}</span></span></span></code></pre></div>
 <p>The .hidden links and nodes are grayed out in the example below.</p>
-<!-- raw HTML omitted -->
+<p data-height="486" data-theme-id="5580" data-slug-hash="EWJxPv" data-default-tab="result" data-user="katzkode" data-embed-version="2" data-pen-title="D3 Binary Search Tree" class="codepen">See the Pen <a href="http://codepen.io/katzkode/pen/EWJxPv/">D3 Binary Search Tree</a> by Alex Katz (<a href="http://codepen.io/katzkode">@katzkode</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
 <h2 id="notes">Notes:</h2>
 <p>After completing my initial BST implementation, I consulted <a href="http://www.algolist.net/Data_structures/Binary_search_tree/Insertion">Algolist</a> for some ideas on how to clean up my code. I particularly like how they have an insertion method in the BST and Node class. This allows for insertion to be called directly on a node or tree instance. This was cleaner than my method of passing the value to be inserted and a root node to insert().</p>
   </section>
@@ -189,6 +192,9 @@
 
 
 </div>
+
+
+
 
 
 

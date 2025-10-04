@@ -49,7 +49,7 @@
 <p>My site is in a directory named <code>alexkatz-hugo</code>. I run <code>hugo</code> on the command line to generate the site into the <code>public</code> directory. The public directory is a submodule.</p>
 <p>To deploy my site I run a shell script that clears my public folder, generates the site with Hugo, and commits and pushes my changes.</p>
 <p>Before generating the site, my script removes all files and directories from the public folder, except for the .git directory and CNAME file. It is important to clear the public directory because running <code>hugo</code> does not remove previously generated files. If you don&rsquo;t clear the public directory you may end up deploying drafts or deleted content.</p>
-<p>See the <!-- raw HTML omitted -->documentation<!-- raw HTML omitted --> for more details.</p>
+<p>See the <a href="https://gohugo.io/overview/usage/#a-note-about-deployment" target="_blank">documentation</a> for more details.</p>
 <p>Here is my deployment script.</p></p>
         <p><a class="readmore link" href="http://localhost:1313/posts/hugo-site-deployment/">Read More</a></p>
       </section>
@@ -58,7 +58,8 @@
         <h6 class="date">Sat, Apr 8, 2017</h6>
         <p><p>This post will discuss how to connect a BST implementation to d3.js.</p>
 <p>I recently implemented a Binary Search Tree in JavaScript. It was a fun exercise and a great opportunity to use ES6 Classes.</p>
-<p>Below is my code for the Binary Search Tree class, Node class, and their insertion methods.</p></p>
+<p>Below is my code for the Binary Search Tree class, Node class, and their insertion methods.</p>
+<!-- My complete implementation which includes node removal is [here](link). --></p>
         <p><a class="readmore link" href="http://localhost:1313/posts/binary-search-tree/">Read More</a></p>
       </section>
       <section class="post">
@@ -98,9 +99,28 @@
         <p><p>This tutorial provides an end to end walkthrough of uploading images in Node with Multer.</p>
 <p>To make things simple I am providing an app-template and complete code.
 Feel free to use the template or an app that you are working on.</p>
-<p><!-- raw HTML omitted -->App-Template<!-- raw HTML omitted --></p>
-<p><!-- raw HTML omitted -->Complete Code<!-- raw HTML omitted --></p>
-<p>I am using <!-- raw HTML omitted -->Multer 1.2.0<!-- raw HTML omitted --> and Node 6.4.0.</p></p>
+<p><a href="https://github.com/alexanderkatz/app-template" target="_blank">App-Template</a></p>
+<p><a href="http://Complete Code" target="_blank">Complete Code</a></p>
+<p>I am using <a href="https://github.com/expressjs/multer" target="_blank">Multer 1.2.0</a> and Node 6.4.0.</p>
+<ol>
+<li>Install Multer, Mime, and Cryto and save to dependencies.</li>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"> <span class="sb">`npm install -S multer`</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"> <span class="sb">`npm install -S mime`</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"> <span class="sb">`npm install -S crypto`</span></span></span></code></pre></div>
+<li>Require depencies in route `index.js`</li>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="kd">var</span> <span class="nx">express</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;express&#39;</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">router</span> <span class="o">=</span> <span class="nx">express</span><span class="p">.</span><span class="nx">Router</span><span class="p">(),</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">mime</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;mime&#39;</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">multer</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;multer&#39;</span><span class="p">);</span></span></span></code></pre></div>
+<li>Create a form in `index.ejs`</li>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">form</span> <span class="na">action</span><span class="o">=</span><span class="s">&#34;/upload&#34;</span> <span class="na">enctype</span><span class="o">=</span><span class="s">&#34;multipart/form-data&#34;</span> <span class="na">method</span><span class="o">=</span><span class="s">&#34;POST&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">Select an image to upload:
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">input</span> <span class="na">name</span><span class="o">=</span><span class="s">&#34;image&#34;</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;file&#34;</span> <span class="p">/&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;submit&#34;</span> <span class="na">value</span><span class="o">=</span><span class="s">&#34;Upload Image&#34;</span> <span class="p">/&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">form</span><span class="p">&gt;</span></span></span></code></pre></div>
+<p>The form <code>enctype</code> must be <code>multipart/form-data</code>, which is the encoding used for forms that upload files. The <code>enctype</code> specifies how the form-data is encoded when it is submitted to a server.</p></p>
         <p><a class="readmore link" href="http://localhost:1313/posts/image-upload-with-node-and-multer/">Read More</a></p>
       </section>
       <section class="post">
@@ -108,7 +128,7 @@ Feel free to use the template or an app that you are working on.</p>
         <h6 class="date">Sun, Aug 14, 2016</h6>
         <p><p>The Embed API is a JavaScript library that lets you create custom dashboards for Google Analytics that can be hosted on your own site. Why bother creating a dashboard programmatically when you can just create one using Google’s site? Because you can make a better one, control its styling, and accomplish things that cannot be done through Google Analytics alone.</p>
 <p>There is a Google tutorial on the Embed API which I used and and enjoyed. I am borrowing from it, but am filling in gaps and adding sections.</p>
-<p>To see the types of dashboards that can be built using the API, check out the Embed API <!-- raw HTML omitted -->demos<!-- raw HTML omitted -->.</p></p>
+<p>To see the types of dashboards that can be built using the API, check out the Embed API <a title="demos" href="https://ga-dev-tools.appspot.com/demos/embed-api" target="_blank">demos</a>.</p></p>
         <p><a class="readmore link" href="http://localhost:1313/posts/google-analytics-embed-api/">Read More</a></p>
       </section>
       <section class="post">
@@ -136,6 +156,9 @@ Feel free to use the template or an app that you are working on.</p>
 
 
 </div>
+
+
+
 
 
 

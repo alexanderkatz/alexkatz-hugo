@@ -105,7 +105,7 @@ If the audio is playing we pause it and change pButton’s class to play.</p>
 </span></span><span class="line"><span class="cl">	<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></span></span></code></pre></div>
 <p>The audio player should look something like this</p>
-<!-- raw HTML omitted -->
+<img width="400" src="http://localhost:1313/img/building-a-custom-html5-audio-player-with-javascript/audioplayer.png">
 <p>The next step is to write JavaScript that will move the playhead as the track advances. This is accomplished by adding an event listener for timeupdate that triggers a function that moves the playhead the appropriate amount. In order for time update to work we will also need to get the duration of the audio file. The code is also below.</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="kd">var</span> <span class="nx">duration</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl"><span class="kd">var</span> <span class="nx">music</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;playhead&#39;</span><span class="p">);</span>
@@ -161,9 +161,10 @@ If the audio is playing we pause it and change pButton’s class to play.</p>
 <p>The moveplayhead function works by changing the playhead’s left margin. The left margin controls the space between the left side of the timeline and the playhead. To calculate the correct left margin value, the x-coordinate of the click event is subtracted by the timeline’s left offset. The left offset is calculated with <code>getPosition</code>.</p>
 <p>The conditionals are necessary if the you want to support playhead dragging. If you don’t, just set the playhead’s left margin to newMarginLeft, as any click will be inside the timeline.</p>
 <p>The codepen below puts everything together.</p>
-<!-- raw HTML omitted -->
+<p data-height="300" data-theme-id="5580" data-slug-hash="Kfgix" data-default-tab="result" data-user="katzkode" data-embed-version="2" data-pen-title="HTML5 Audio Player" class="codepen">See the Pen <a href="http://codepen.io/katzkode/pen/Kfgix/">HTML5 Audio Player</a> by Alex Katz (<a href="http://codepen.io/katzkode">@katzkode</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
 <p><a href="https://github.com/alexanderkatz/HTML5-Audio">Complete Code on GitHub</a></p>
-<p>If you are interested in using multiple audio players on the same page, you can check out my code here – <!-- raw HTML omitted -->Multiple HTML5 Audio Players<!-- raw HTML omitted -->.</p>
+<p>If you are interested in using multiple audio players on the same page, you can check out my code here – <a href="http://localhost:1313/posts/multiple-html5-audio-players">Multiple HTML5 Audio Players</a>.</p>
   </section>
 </section>
 
@@ -180,6 +181,9 @@ If the audio is playing we pause it and change pButton’s class to play.</p>
 
 
 </div>
+
+
+
 
 
 

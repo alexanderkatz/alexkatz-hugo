@@ -1,9 +1,7 @@
 theme = "curlew"
 
-# If you use your GitHub Pages user site:
-# baseURL = "https://alexanderkatz.github.io/"
-# If you switch to your custom domain later, change to:
- baseURL = "https://alexkatz.me/"
+# custom domain
+baseURL = "https://alexkatz.me/"
 
 languageCode = "en-us"
 title = "Alex Katz"
@@ -16,6 +14,10 @@ canonifyURLs = true
 contentDir = "content"
 layoutDir = "layouts"
 publishDir = "public"
+
+# Enable raw HTML globally
+[markup.goldmark.renderer]
+unsafe = true
 
 # Modern syntax highlighting (replace old Pygments settings):
 [markup]

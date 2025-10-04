@@ -30,7 +30,7 @@
 <p>My site is in a directory named <code>alexkatz-hugo</code>. I run <code>hugo</code> on the command line to generate the site into the <code>public</code> directory. The public directory is a submodule.</p>
 <p>To deploy my site I run a shell script that clears my public folder, generates the site with Hugo, and commits and pushes my changes.</p>
 <p>Before generating the site, my script removes all files and directories from the public folder, except for the .git directory and CNAME file. It is important to clear the public directory because running <code>hugo</code> does not remove previously generated files. If you don&rsquo;t clear the public directory you may end up deploying drafts or deleted content.</p>
-<p>See the <!-- raw HTML omitted -->documentation<!-- raw HTML omitted --> for more details.</p>
+<p>See the <a href="https://gohugo.io/overview/usage/#a-note-about-deployment" target="_blank">documentation</a> for more details.</p>
 <p>Here is my deployment script.</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="cp">#!/bin/bash
 </span></span></span><span class="line"><span class="cl"><span class="cp"></span>
@@ -83,6 +83,9 @@
 
 
 </div>
+
+
+
 
 
 
