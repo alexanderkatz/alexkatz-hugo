@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on Alex Katz</title>
+    <link>http://localhost:1313/posts/</link>
+    <description>Recent content in Posts on Alex Katz</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 14 Apr 2017 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Building a Custom HTML5 Audio Player With Javascript</title>
+      <link>http://localhost:1313/posts/building-a-custom-html5-audio-player-with-javascript/</link>
+      <pubDate>Sun, 04 May 2014 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/building-a-custom-html5-audio-player-with-javascript/</guid>
+      <description>&lt;p&gt;This tutorial details how JavaScriptpt, HTML, and CSS can be used to make a custom HTML5 audio interface. It is divided into three sections.&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;The Play Button&lt;/li&gt;&#xA;&lt;li&gt;Track Progress&lt;/li&gt;&#xA;&lt;li&gt;Changing Track Position&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;p&gt;Here is the code for the audio element that we will be controlling.&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-html&#34; data-lang=&#34;html&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;audio&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;id&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;music&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;controls&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;controls&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;source&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;src&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;music/onlyidreamwithyou1.ogg&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;type&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;audio/ogg&amp;#34;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;/&amp;gt;&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;source&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;src&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;music/onlyidreamwithyou1.mp3&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;type&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;audio/mpeg&amp;#34;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;/&amp;gt;&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;audio&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+    </item>
+    <item>
+      <title>Hugo Site Deployment</title>
+      <link>http://localhost:1313/posts/hugo-site-deployment/</link>
+      <pubDate>Fri, 14 Apr 2017 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/hugo-site-deployment/</guid>
+      <description>&lt;p&gt;I built my site with Hugo and am hosting in on GitHub Pages.&lt;/p&gt;&#xA;&lt;p&gt;My site is in a directory named &lt;code&gt;alexkatz-hugo&lt;/code&gt;. I run &lt;code&gt;hugo&lt;/code&gt; on the command line to generate the site into the &lt;code&gt;public&lt;/code&gt; directory. The public directory is a submodule.&lt;/p&gt;&#xA;&lt;p&gt;To deploy my site I run a shell script that clears my public folder, generates the site with Hugo, and commits and pushes my changes.&lt;/p&gt;&#xA;&lt;p&gt;Before generating the site, my script removes all files and directories from the public folder, except for the .git directory and CNAME file. It is important to clear the public directory because running &lt;code&gt;hugo&lt;/code&gt; does not remove previously generated files. If you don&amp;rsquo;t clear the public directory you may end up deploying drafts or deleted content.&lt;/p&gt;&#xA;&lt;p&gt;See the &lt;!-- raw HTML omitted --&gt;documentation&lt;!-- raw HTML omitted --&gt; for more details.&lt;/p&gt;&#xA;&lt;p&gt;Here is my deployment script.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Binary Search Tree</title>
+      <link>http://localhost:1313/posts/binary-search-tree/</link>
+      <pubDate>Sat, 08 Apr 2017 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/binary-search-tree/</guid>
+      <description>&lt;p&gt;This post will discuss how to connect a BST implementation to d3.js.&lt;/p&gt;&#xA;&lt;p&gt;I recently implemented a Binary Search Tree in JavaScript. It was a fun exercise and a great opportunity to use ES6 Classes.&lt;/p&gt;&#xA;&lt;p&gt;Below is my code for the Binary Search Tree class, Node class, and their insertion methods.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>CSS Placeholder Text</title>
+      <link>http://localhost:1313/posts/css-placeholder-text/</link>
+      <pubDate>Fri, 10 Mar 2017 11:35:29 -0500</pubDate>
+      <guid>http://localhost:1313/posts/css-placeholder-text/</guid>
+      <description>&lt;p&gt;How can you find all empty elements on a web page and populate them with placeholder text?&lt;/p&gt;&#xA;&lt;p&gt;My first thought was to use JavaScript, loop through each element, and populate the empty ones. This approach works, but CSS provides a simple solution.&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-css&#34; data-lang=&#34;css&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;o&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;nd&#34;&gt;empty&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;::&lt;/span&gt;&lt;span class=&#34;nd&#34;&gt;before&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt; &#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;k&#34;&gt;content&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;Please Add Information&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+    </item>
+    <item>
+      <title>Using SVG in an Interface</title>
+      <link>http://localhost:1313/posts/using-svg/</link>
+      <pubDate>Wed, 22 Feb 2017 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/using-svg/</guid>
+      <description>&lt;p&gt;Even though I have been working with SVG in Illustrator for years, it wasn&amp;rsquo;t until last week that I began exploring its application in web development. To start my learning I completed a few video tutorials and researched how SVG is manipulated with CSS and JavaScript.&lt;/p&gt;&#xA;&lt;p&gt;I found a myriad of beautiful SVG animations and visual experiments, but it was not clear how to leverage SVG to enhance UIs. That was until I overheard two of my coworkers discussing how to implement a radial meter to track memory usage in Bluemix. One of them suggested using strokedash-offset and I immediately jumped into the conversation eager to share my new found knowledge.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>SVG Mask</title>
+      <link>http://localhost:1313/posts/svg-mask/</link>
+      <pubDate>Sun, 29 Jan 2017 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/svg-mask/</guid>
+      <description>&lt;p&gt;Although this technique is not new, I still wanted to share it.&lt;/p&gt;&#xA;&lt;p&gt;In the past if I wanted to change the color of an icon on hover I would have changed the background of the element to a differently colored icon. The CSS would have looked something like this.&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-css&#34; data-lang=&#34;css&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nc&#34;&gt;icon&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;k&#34;&gt;background&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;path/to/icon.png&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nc&#34;&gt;icon&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;nd&#34;&gt;hover&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;k&#34;&gt;background&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;path/to/different-icon.png&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&#xA;&lt;p&gt;This doesn&amp;rsquo;t seem too cumbersome, but for each icon you need two files with differently colored icons. To make a change to the color, a new file needs to be created.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Image Upload with Node and Multer</title>
+      <link>http://localhost:1313/posts/image-upload-with-node-and-multer/</link>
+      <pubDate>Sat, 03 Dec 2016 21:54:24 -0600</pubDate>
+      <guid>http://localhost:1313/posts/image-upload-with-node-and-multer/</guid>
+      <description>&lt;p&gt;This tutorial provides an end to end walkthrough of uploading images in Node with Multer.&lt;/p&gt;&#xA;&lt;p&gt;To make things simple I am providing an app-template and complete code.&#xA;Feel free to use the template or an app that you are working on.&lt;/p&gt;&#xA;&lt;p&gt;&lt;!-- raw HTML omitted --&gt;App-Template&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;!-- raw HTML omitted --&gt;Complete Code&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;&#xA;&lt;p&gt;I am using &lt;!-- raw HTML omitted --&gt;Multer 1.2.0&lt;!-- raw HTML omitted --&gt; and Node 6.4.0.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Google Analytics Embed API</title>
+      <link>http://localhost:1313/posts/google-analytics-embed-api/</link>
+      <pubDate>Sun, 14 Aug 2016 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/google-analytics-embed-api/</guid>
+      <description>&lt;p&gt;The Embed API is a JavaScript library that lets you create custom dashboards for Google Analytics that can be hosted on your own site. Why bother creating a dashboard programmatically when you can just create one using Google’s site? Because you can make a better one, control its styling, and accomplish things that cannot be done through Google Analytics alone.&lt;/p&gt;&#xA;&lt;p&gt;There is a Google tutorial on the Embed API which I used and and enjoyed. I am borrowing from it, but am filling in gaps and adding sections.&lt;/p&gt;&#xA;&lt;p&gt;To see the types of dashboards that can be built using the API, check out the Embed API &lt;!-- raw HTML omitted --&gt;demos&lt;!-- raw HTML omitted --&gt;.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Multiple HTML5 Audio Players</title>
+      <link>http://localhost:1313/posts/multiple-html5-audio-players/</link>
+      <pubDate>Tue, 25 Aug 2015 21:54:59 -0600</pubDate>
+      <guid>http://localhost:1313/posts/multiple-html5-audio-players/</guid>
+      <description>&lt;p&gt;This is a follow up to my original article, Building a Custom HTML5 Audio Player With Javascript.&lt;/p&gt;&#xA;&lt;p&gt;A number of people have asked me how to make multiple audio players on one page, so I decided to figure it out. I am posting the code before writing a tutorial so it can be used for your projects.&lt;/p&gt;&#xA;&lt;p&gt;In brief I created an object called AudioObject for each track and store each object in an array. By storing all the tracks I am able to access each players audio and the components of their interface. I also created a lookup table that maps components like a playbutton or playhead to the array index of the correct AudioObject. The code is well commented, but still needs to be refined and further tested.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

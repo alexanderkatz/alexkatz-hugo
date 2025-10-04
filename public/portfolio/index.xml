@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Portfolios on Alex Katz</title>
+    <link>http://localhost:1313/portfolio/</link>
+    <description>Recent content in Portfolios on Alex Katz</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 01 Jan 2017 14:01:10 -0500</lastBuildDate>
+    <atom:link href="http://localhost:1313/portfolio/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Purple Crayon</title>
+      <link>http://localhost:1313/portfolio/purple-crayon/</link>
+      <pubDate>Sun, 01 Jan 2017 14:01:10 -0500</pubDate>
+      <guid>http://localhost:1313/portfolio/purple-crayon/</guid>
+      <description>&lt;p&gt;Purple Crayon is a blogging platform I developed and designed with Ilona Brand. We used Node, express, and Passport along with other technologies.&lt;/p&gt;&#xA;&lt;p&gt;In addition to supporting account creation and authentication we used Express to give each user their own subdomain:&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;username&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;purplecrayon&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;me&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/p&gt;&#xA;&lt;p&gt;Feel free to check out &lt;!-- raw HTML omitted --&gt;Purple Crayon&lt;!-- raw HTML omitted --&gt; or the &lt;!-- raw HTML omitted --&gt;GitHub Repository&lt;!-- raw HTML omitted --&gt;.&lt;/p&gt;&#xA;&lt;!-- raw HTML omitted --&gt;</description>
+    </item>
+    <item>
+      <title>O.D.C.</title>
+      <link>http://localhost:1313/portfolio/odc/</link>
+      <pubDate>Sun, 01 Jan 2017 14:01:01 -0500</pubDate>
+      <guid>http://localhost:1313/portfolio/odc/</guid>
+      <description>&lt;!-- raw HTML omitted --&gt;</description>
+    </item>
+    <item>
+      <title>For Millie</title>
+      <link>http://localhost:1313/portfolio/for-millie/</link>
+      <pubDate>Sun, 01 Jan 2017 14:00:50 -0500</pubDate>
+      <guid>http://localhost:1313/portfolio/for-millie/</guid>
+      <description>&lt;!-- raw HTML omitted --&gt;&#xA;&lt;p&gt;For Millie, is a solo that I performed for Oberlin&amp;rsquo;s Fall Forward. It is a mix of choreography and structured improvisation. It is a House piece, but I also draw on breaking and contemporary.&#xA;Thank you Millie and Rennie for introducing me to House.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Animation</title>
+      <link>http://localhost:1313/portfolio/animation/</link>
+      <pubDate>Sun, 01 Jan 2017 14:00:25 -0500</pubDate>
+      <guid>http://localhost:1313/portfolio/animation/</guid>
+      <description>&lt;p&gt;Here is an animation I made recently. In the near future I will add more experiments and the ability to pause and play animations.&lt;/p&gt;&#xA;&lt;!-- raw HTML omitted --&gt;</description>
+    </item>
+    <item>
+      <title>append</title>
+      <link>http://localhost:1313/portfolio/append/</link>
+      <pubDate>Sun, 01 Jan 2017 14:00:25 -0500</pubDate>
+      <guid>http://localhost:1313/portfolio/append/</guid>
+      <description>&lt;!-- raw HTML omitted --&gt;</description>
+    </item>
+    <item>
+      <title>Personas Site</title>
+      <link>http://localhost:1313/portfolio/personasite/</link>
+      <pubDate>Sun, 01 Jan 2017 14:00:25 -0500</pubDate>
+      <guid>http://localhost:1313/portfolio/personasite/</guid>
+      <description>&lt;p&gt;&lt;!-- raw HTML omitted --&gt;Property of IBM&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;&#xA;&lt;p&gt;The Personas Site is an application I built at IBM for my team to record and share research findings. I used Node.js, Express, MongoDB, and Nunjucks.&lt;/p&gt;&#xA;&lt;p&gt;Users create personas through a webform in which they can upload an image, document their research, and link to external resources.&lt;/p&gt;&#xA;&lt;p&gt;I used Nunjucks macros to format the data on the individual persona pages.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Kinect</title>
+      <link>http://localhost:1313/portfolio/kinect/</link>
+      <pubDate>Sun, 01 Jan 2017 14:00:04 -0500</pubDate>
+      <guid>http://localhost:1313/portfolio/kinect/</guid>
+      <description>&lt;p&gt;During my junior year I decided to take a break from all things web and to focus my energy on combining my two passions, coding and dance. I designed a private study in which I created a dance piece that utilized a dancer’s motion to manipulate and generate audio. I used a Kinect to capture video and processed it using Synapse and MAX.&lt;/p&gt;&#xA;&lt;p&gt;My piece was performed at Oberlin’s Student Dance Showcase. The piece would not have been possible without Jon Bellona’s Kinect-via-Synapse and Synapse.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Personal Brand</title>
+      <link>http://localhost:1313/portfolio/personal-brand/</link>
+      <pubDate>Sun, 01 Jan 2017 13:59:43 -0500</pubDate>
+      <guid>http://localhost:1313/portfolio/personal-brand/</guid>
+      <description>&lt;!-- raw HTML omitted --&gt;</description>
+    </item>
+    <item>
+      <title>ocovoco</title>
+      <link>http://localhost:1313/portfolio/ocovoco/</link>
+      <pubDate>Sun, 01 Jan 2017 13:59:32 -0500</pubDate>
+      <guid>http://localhost:1313/portfolio/ocovoco/</guid>
+      <description>&lt;!-- raw HTML omitted --&gt;</description>
+    </item>
+    <item>
+      <title>Listen and Tell</title>
+      <link>http://localhost:1313/portfolio/listen-and-tell/</link>
+      <pubDate>Mon, 26 Dec 2016 20:27:22 -0600</pubDate>
+      <guid>http://localhost:1313/portfolio/listen-and-tell/</guid>
+      <description>&lt;!-- raw HTML omitted --&gt;</description>
+    </item>
+    <item>
+      <title>Kendrick Lamar</title>
+      <link>http://localhost:1313/portfolio/kendrick-lamar/</link>
+      <pubDate>Mon, 26 Dec 2016 20:24:42 -0600</pubDate>
+      <guid>http://localhost:1313/portfolio/kendrick-lamar/</guid>
+      <description>&lt;!-- raw HTML omitted --&gt;</description>
+    </item>
+  </channel>
+</rss>
