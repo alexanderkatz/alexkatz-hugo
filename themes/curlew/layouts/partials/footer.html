@@ -14,6 +14,12 @@
 </div>
 
 <!-- Only inlude isotope for portfolio -->
+{{ if eq .RelPermalink "/" }}
+    <script src="/js/sketch.js"></script>
+    <script src="/js/p5.min.js"></script>
+{{ end }}
+
+<!-- Only inlude isotope for portfolio -->
 {{ if eq .RelPermalink "/portfolio/" }}
     <script src="/js/isotope.pkgd.min.js"></script>
     <script src="/js/filter.js"></script>
