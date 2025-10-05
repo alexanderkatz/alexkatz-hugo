@@ -1,3 +1,10 @@
-/public/
-node_modules//public
-/resources/_gen
+# Node
+node_modules/
+themes/**/node_modules/
+
+# macOS noise
+.DS_Store
+
+# Hugo
+public/
+resources/
