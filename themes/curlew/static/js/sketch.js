@@ -104,8 +104,6 @@ function draw() {
     let multX = 1 + 1 * proximityX;
     let multY = 1 + 1 * proximityX;
 
-    // printOncePerSecond(proximityX + " " + multX);
-
     // move
     b.x += b.vx * deltaTime * multX; // deltaTime is ms between frames
     b.y += b.vy * deltaTime;
@@ -113,7 +111,6 @@ function draw() {
     // collide with right wall
     if (b.x >= width - radius) {
       b.x = width - radius; // clamp inside
-      printOncePerSecond(b.vx);
       b.vx *= -1;
     }
     // collide with left wall
