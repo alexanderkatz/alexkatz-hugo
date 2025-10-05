@@ -2,58 +2,64 @@
 $color: $accent;
 
 svg {
-  padding-top:1px;
+  padding-top: 1px;
 }
 
-#logo
-    &:hover{
-    .logo{
-        animation:draw-logo 2.5s 1;
-        transition: fill ease; 
+#logo {
+  &:hover {
+    .logo {
+      animation: draw-logo 2.5s 1;
+      transition: fill ease;
     }
-    .circle{
-        animation:draw-circle 2.5s 1;
+
+    .circle {
+      animation: draw-circle 2.5s 1;
     }
+  }
 }
 
-.logo{
+.logo {
   fill: $color;
   stroke: $color;
   stroke-width: 3px;
-  stroke-dasharray:3115px;
+  stroke-dasharray: 3115px;
 }
 
-@keyframes draw-logo{
-  0%{
-    stroke-dashoffset:3115;
-    fill:rgba(0,0,0,0);
+@keyframes draw-logo {
+  0% {
+    stroke-dashoffset: 3115;
+    fill: rgba(0, 0, 0, 0);
 
   }
-  50%{
-    stroke-dashoffset:0;
-    fill:rgba(0,0,0,0);
+
+  50% {
+    stroke-dashoffset: 0;
+    fill: rgba(0, 0, 0, 0);
 
   }
-  100%{
-    fill:$color;
+
+  100% {
+    fill: $color;
   }
 }
 
-.circle{
-  fill:$color;
+.circle {
+  fill: $color;
   // stroke:black;
   // stroke-width: 3px;
-  stroke-dasharray:80px;
+  stroke-dasharray: 80px;
 }
 
-@keyframes draw-circle{
- 0%{
-     fill:rgba(0,0,0,0);
+@keyframes draw-circle {
+  0% {
+    fill: rgba(0, 0, 0, 0);
   }
-  50%{
-      fill:rgba(0,0,0,0);
+
+  50% {
+    fill: rgba(0, 0, 0, 0);
   }
-  100%{
-      fill:$color;
+
+  100% {
+    fill: $color;
   }
 }
