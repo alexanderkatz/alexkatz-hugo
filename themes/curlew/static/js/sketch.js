@@ -1,4 +1,4 @@
-let radius = 100;
+let diameter = 200;
 let circleFill = "rgba(255, 101, 69, 1)";
 let numBalls = 10;
 let balls = [];
@@ -8,6 +8,8 @@ let lastLog = 0.0;
 
 function windowResized() {
   resizeCanvas(windowWidth, windowHeight);
+  diameter = windowWidth/10;
+
 }
 
 // print 1/s
@@ -20,7 +22,8 @@ function printOncePerSecond(msg) {
 }
 
 function setup() {
-  console.log("//setup//");
+  diameter = windowWidth/10;
+  console.log("//setup//"+diameter);
   let canvas = createCanvas(windowWidth, windowHeight);
   canvas.position(0, 0);
   canvas.style('z-index', '-1'); // push behind page content
@@ -31,13 +34,13 @@ function setup() {
    */
   for (let i = 0; i < numBalls; i++) {
     balls.push({
-      x: random(50, width - 50),
-      y: random(50, height - 50),
+      x: random(diameter/2, width - diameter/2),
+      y: random(diameter/2, height - diameter/2),
       vx: random([-1, 1]) * random(60, 150), // px/sec
       vy: random([-1, 1]) * random(60, 150), // px/sec
-      radius: radius,
+      diamater: diameter,
     });
-    console.log(balls[i]);
+    // console.log(balls[i]);
   }
 }
 
@@ -94,27 +97,27 @@ function draw() {
     b.y += b.vy * dt * multY;
 
     // collide with right wall
-    if (b.x >= width - radius) {
-      b.x = width - radius; // clamp inside
+    if (b.x >= width - diameter/2) {
+      b.x = width - diameter/2; // clamp inside
       b.vx *= -1;
     }
     // collide with left wall
-    if (b.x <= radius) {
-      b.x = radius; // clamp inside
+    if (b.x <= diameter/2) {
+      b.x = diameter/2; // clamp inside
       b.vx *= -1;
     }
     // collide with top wall
-    if (b.y <= radius) {
-      b.y = radius; // clamp inside
+    if (b.y <= diameter/2) {
+      b.y = diameter/2; // clamp inside
       b.vy *= -1;
     }
     // collide with bottom wall
-    if (b.y >= height - radius) {
-      b.y = height - radius; // clamp inside
+    if (b.y >= height - diameter/2) {
+      b.y = height - diameter/2; // clamp inside
       b.vy *= -1;
     }
 
     // draw the circle
-    circle(b.x, b.y, windowWidth/b.radius*10);
+    circle(b.x, b.y, diameter);
   }
 }
