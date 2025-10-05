@@ -23,7 +23,6 @@ function printOncePerSecond(msg) {
 
 function setup() {
   diameter = windowWidth/10;
-  console.log("//setup//"+diameter);
   let canvas = createCanvas(windowWidth, windowHeight);
   canvas.position(0, 0);
   canvas.style('z-index', '-1'); // push behind page content
