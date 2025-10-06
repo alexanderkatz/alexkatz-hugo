@@ -23,11 +23,17 @@ function printOncePerSecond(msg) {
 
 function setup() {
   diameter = windowWidth/10;
-  let canvas = createCanvas(windowWidth, windowHeight);
+
+  // Match physical screen size (accounts for DPR on iOS)
+  pixelDensity(window.devicePixelRatio || 1);
+
+  const canvas = createCanvas(windowWidth, windowHeight);
+  canvas.id('bg-canvas');                 // so we can target it with CSS
   canvas.position(0, 0);
-  // Sets position to fixed
-  canvas.elt.style.position = 'fixed';
-  canvas.style('z-index', '-1'); // push behind page content
+  canvas.style('position', 'fixed');      // stick to viewport, not the page
+  canvas.style('inset', '0');             // top/right/bottom/left = 0
+  canvas.style('z-index', '-1');          // behind page content
+  canvas.style('pointer-events', 'none'); // don’t block taps/scroll
 
   /* Create an array of balls
    * (x, y) - random coordinates
