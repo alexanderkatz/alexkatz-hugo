@@ -25,6 +25,8 @@ function setup() {
   diameter = windowWidth/10;
   let canvas = createCanvas(windowWidth, windowHeight);
   canvas.position(0, 0);
+  // Sets position to fixed
+  canvas.elt.style.position = 'fixed';
   canvas.style('z-index', '-1'); // push behind page content
 
   /* Create an array of balls
