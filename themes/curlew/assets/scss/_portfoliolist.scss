@@ -1,0 +1,71 @@
+// // Portfolio Grid Styling
+// 
+.filters{
+    max-width: 1260px;
+    margin: 1rem auto;
+    padding: 0 1rem;
+    button{
+        margin-right: .25rem;
+        font-size: 1rem;
+        font-family: firamonoregular;
+        color:$filter;
+        background:$background;
+        border: solid $filter 1px;
+        border-radius: 10px;
+        transition: all .25s;
+        outline: none;
+        // Should be set through js
+        &.active{
+            color:$background;
+            background: $filter;
+        }
+    }
+}
+
+// 
+.portfolio {
+    max-width: 1260px;
+    margin: 2rem auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+.portfolio_item {
+    background-size: cover !important;
+    margin-bottom: 1rem;
+    width: calc(100% - 2rem);    
+    // Standard portfolio item height, specify in front-matter
+    &.std {
+        height: 250px;
+    }
+    // Poster portfolio item height, specify in front-matter
+    &.poster {
+        height: 386px;
+    }
+    a {
+        display: block;
+        position: relative;
+        height: 100%;
+        color: transparent;
+        transition: all 0.3s;
+        font-size: 36px;
+        line-height: 45px;
+        font-family: firamonobold;
+        &:hover {
+            color: white;
+            background: $tile-hover;
+        }
+        // position link text
+        span {
+            position: absolute;;
+            top: 1rem;
+            left: 1rem;
+            right: .5rem;
+        }
+    }
+}
+
+@media all and (min-width:525px) {
+    .portfolio_item {
+        width: 235px;
+    }
+} 
