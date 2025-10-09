@@ -7,4 +7,6 @@ themes/**/node_modules/
 
 # Hugo
 public/
-resources/
+# ignore only generated Hugo resources
+resources/_gen/
+.hugo_build.lock

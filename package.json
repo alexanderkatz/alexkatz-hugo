@@ -10,11 +10,8 @@
   },
   "devDependencies": {
     "fancy-log": "^2.0.0",
-    "gulp": "^4.0.2",
     "gulp-clean-css": "^4.3.0",
     "gulp-jshint": "^2.0.1",
-    "gulp-sass": "^5.1.0",
-    "gulp-util": "^3.0.7",
     "jshint": "^2.9.3",
     "jshint-stylish": "^2.2.1",
     "sass": "^1.93.2"
